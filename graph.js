@@ -26,7 +26,7 @@ class SimpleWordGraph {
     
     async loadTheme(themeName) {
         try {
-            const response = await fetch(`../data/${themeName}.json`);
+            const response = await fetch(`data/${themeName}.json`);
             this.data = await response.json();
             this.currentTheme = themeName;
             
