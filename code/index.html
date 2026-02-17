@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexikon-Graph | Interaktiver Wortschatz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Заголовок -->
+        <header>
+            <h1><i class="fas fa-project-diagram"></i> Название</h1>
+            <div class="controls">
+                <div class="theme-selector">
+                    <h3><i class="fas fa-book"></i> Thema wählen</h3>
+                    <select id="themeSelect">
+                        <option value="reise">Reisen & Tourismus</option>
+                        <option value="sport">Sport & Fitness</option>
+                        <option value="essen">Essen & Kochen</option>
+                        <option value="arbeit">Arbeit & Beruf</option>
+                    </select>
+                    <button id="loadThemeBtn">
+                        <i class="fas fa-sync"></i> Thema laden
+                    </button>
+                </div>
+                
+                <div class="graph-controls">
+                    <h3><i class="fas fa-sliders-h"></i> Graph-Einstellungen</h3>
+                    <button id="resetBtn">
+                        <i class="fas fa-redo"></i> Graph zurücksetzen
+                    </button>
+                    <button id="layoutBtn">
+                        <i class="fas fa-network-wired"></i> Layout wechseln
+                    </button>
+                </div>
+                
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Wort suchen...">
+                    <i class="fas fa-search"></i>
+                </div>
+            
+            </div>
+        </header>
+
+        <!-- Основной контейнер -->
+        <main>
+            <!-- Центр: Граф -->
+            <div class="graph-container">
+                <svg id="wordGraph" width="800" height="600"></svg>
+                <div class="graph-info">
+                    <span id="nodeCount">0 Wörter</span>
+                    <span id="edgeCount">0 Verbindungen</span>
+                    <span id="themeName">Thema: Reisen</span>
+                </div>
+            </div>
+
+            <!-- Правая панель: Детали -->
+            <div class="details">
+                <h2 id="wordTitle">Wort auswählen</h2>
+                <div class="word-info">
+                    <span id="wordTranslation" class="translation">-</span>
+                    <span id="wordLevel" class="level">-</span>
+                    <span id="wordType" class="type">-</span>
+                </div>
+                
+                <div class="section">
+                    <h3><i class="fas fa-book"></i> Definition</h3>
+                    <p id="wordDefinition">-</p>
+                </div>
+                
+                <div class="section">
+                    <h3><i class="fas fa-quote-right"></i> Beispiel</h3>
+                    <p id="wordExample" class="example">-</p>
+                </div>
+                
+                <div class="section">
+                    <h3><i class="fas fa-link"></i> Verbindungen & Details</h3>
+                    <div id="connections" class="connections">
+                        <!-- Заполнится динамически -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Футер -->
+        <footer>
+            <p><strong>Innovationspotenzial:</strong> Semantische Wortnetze für kontextuelles Lernen</p>
+        </footer>
+    </div>
+
+    <script src="graph.js"></script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+{
+  "sections": {
+    "planung": {
+      "id": "planung",
+      "title": "Planung",
+      "description": "Reisevorbereitung und Buchungen",
+      "words": {
+        "buchung": {
+          "id": "buchung",
+          "title": "die Buchung",
+          "article": "die",
+          "translation": "бронирование",
+          "definition": "Reservierung eines Services wie Hotel, Flug oder Mietwagen",
+          "example": "Ich habe eine Buchung für drei Nächte im Hotel Atlantic bestätigt.",
+          "level": "A2",
+          
+          "connections": {
+            "verbs": ["tätigen", "stornieren", "bestätigen"],
+            "related": ["unterkunft", "flug", "hotel", "reservierung"],
+            "situations": ["Rezeption", "Online-Plattform", "Reisebüro"]
+          },
+          
+          "synonyms": ["Reservierung", "Vorbestellung", "Registrierung"],
+          "antonyms": ["Stornierung", "Absage", "Kündigung"],
+          
+          "collocations": {
+            "adjectives": ["frühzeitige", "online", "verbindliche", "letzte"],
+            "verbs": ["eine Buchung tätigen", "eine Buchung stornieren", "eine Buchung bestätigen"]
+          },
+          
+          "phrases": [
+            "eine Buchung vornehmen",
+            "eine Buchung rückgängig machen",
+            "die Buchung ist verbindlich"
+          ],
+          
+          "context": "Wird verwendet bei der Planung von Reisen, insbesondere für Unterkünfte und Transportmittel. Oft im Zusammenhang mit Online-Portalen wie Booking.com oder Expedia."
+        },
+
+        "unterkunft": {
+          "id": "unterkunft",
+          "title": "die Unterkunft",
+          "article": "die",
+          "translation": "жилье, место проживания",
+          "definition": "Ein Ort, an dem man während einer Reise übernachtet",
+          "example": "Wir suchen noch eine günstige Unterkunft in der Innenstadt.",
+          "level": "A1",
+          
+          "connections": {
+            "verbs": ["buchen", "reservieren", "finden", "weiterempfehlen"],
+            "related": ["hotel", "hostel", "zimmer", "buchung", "übernachtung"],
+            "situations": ["Booking.com", "Airbnb", "Rezeption", "Stadtzentrum"]
+          },
+          
+          "synonyms": ["Quartier", "Beherbergung", "Logis", "Hotelzimmer"],
+          "antonyms": ["Obdachlosigkeit", "Heimat", "Wohnung"],
+          
+          "collocations": {
+            "adjectives": ["günstige", "komfortable", "zentrale", "einfache"],
+            "verbs": ["eine Unterkunft buchen", "eine Unterkunft suchen", "eine Unterkunft empfehlen"]
+          },
+          
+          "phrases": [
+            "Unterkunft mit Frühstück",
+            "Unterkunft auf dem Land",
+            "Unterkunft für eine Nacht"
+          ],
+          
+          "context": "Wichtigster Bestandteil jeder Reiseplanung. Kann von einfachen Hostels bis zu Luxushotels reichen. Preis und Lage sind entscheidende Faktoren."
+        },
+
+        "buchen": {
+          "id": "buchen",
+          "title": "buchen",
+          "article": "verb",
+          "translation": "бронировать, заказывать",
+          "definition": "Etwas für einen späteren Zeitpunkt reservieren oder bestellen",
+          "example": "Ich möchte einen Flug nach Berlin buchen.",
+          "level": "A1",
+          
+          "connections": {
+            "verbs": ["reservieren", "bestellen", "planen"],
+            "related": ["buchung", "unterkunft", "flug", "ticket"],
+            "situations": ["Online", "Reisebüro", "Telefonisch"]
+          },
+          
+          "synonyms": ["reservieren", "bestellen", "vorbestellen", "ankreuzen"],
+          "antonyms": ["stornieren", "absagen", "abbestellen"],
+          
+          "verb_management": {
+            "prepositions": ["buchen für", "buchen über", "buchen bei"],
+            "cases": ["Akkusativ"],
+            "examples": [
+              "Ich buche ein Hotel für nächste Woche.",
+              "Sie hat den Flug über das Internet gebucht.",
+              "Er bucht bei einer bekannten Airline."
+            ]
+          },
+          
+          "phrases": [
+            "rechtzeitig buchen",
+            "online buchen",
+            "telefonisch buchen"
+          ],
+          
+          "context": "Zentraler Begriff bei Reiseplanungen. Heute meist online über Websites oder Apps. Frühzeitiges Buchen kann Geld sparen."
+        },
+
+        "stornieren": {
+          "id": "stornieren",
+          "title": "stornieren",
+          "article": "verb",
+          "translation": "отменять, аннулировать",
+          "definition": "Eine bereits getätigte Buchung oder Bestellung rückgängig machen",
+          "example": "Leider muss ich meine Buchung stornieren.",
+          "level": "B1",
+          
+          "connections": {
+            "verbs": ["abbrechen", "rückgängig machen", "kündigen"],
+            "related": ["buchung", "rücktritt", "stornierung", "gebühr"],
+            "situations": ["Kundenservice", "Online-Portal", "Per E-Mail"]
+          },
+          
+          "synonyms": ["abbrechen", "annullieren", "rückgängig machen", "aufheben"],
+          "antonyms": ["buchen", "bestätigen", "verlängern"],
+          
+          "verb_management": {
+            "prepositions": ["stornieren bis", "stornieren bei", "stornieren über"],
+            "cases": ["Akkusativ"],
+            "examples": [
+              "Sie können bis 24 Stunden vorher stornieren.",
+              "Ich habe die Reservierung beim Hotel storniert.",
+              "Stornieren Sie über unsere Website."
+            ]
+          },
+          
+          "phrases": [
+            "kostenlos stornieren",
+            "kurzfristig stornieren",
+            "eine Stornierung vornehmen"
+          ],
+          
+          "context": "Wichtig bei flexiblen Reiseplänen. Oft mit Fristen und Gebühren verbunden. Flexibilität kann teurer sein."
+        }
+      }
+    },
+
+    "unterwegs": {
+      "id": "unterwegs",
+      "title": "Unterwegs",
+      "description": "Transport und Reise",
+      "words": {
+        "ankommen": {
+          "id": "ankommen",
+          "title": "ankommen",
+          "article": "verb",
+          "translation": "прибывать, приезжать",
+          "definition": "Am Zielort einer Reise eintreffen",
+          "example": "Wir kommen morgen um 10 Uhr am Flughafen an.",
+          "level": "A1",
+          
+          "connections": {
+            "verbs": ["eintreffen", "landen", "erreichen"],
+            "related": ["abreise", "flughafen", "bahnhof", "ziel"],
+            "situations": ["Flughafen", "Bahnhof", "Hotel", "Treffpunkt"]
+          },
+          
+          "synonyms": ["eintreffen", "erreichen", "landen", "einlaufen"],
+          "antonyms": ["abfahren", "abreisen", "verlassen", "starten"],
+          
+          "verb_management": {
+            "prepositions": ["ankommen in", "ankommen an", "ankommen bei"],
+            "cases": ["Dativ (mit Präposition)"],
+            "examples": [
+              "Wir kommen in Berlin an.",
+              "Der Zug kommt am Bahnhof an.",
+              "Sie kommt bei Freunden an."
+            ]
+          },
+          
+          "phrases": [
+            "pünktlich ankommen",
+            "mit Verspätung ankommen",
+            "am Ziel ankommen"
+          ],
+          
+          "context": "Freudiger Moment jeder Reise. Pünktlichkeit ist oft wichtig. Bei Verspätungen entstehen Probleme."
+        },
+
+        "verpassen": {
+          "id": "verpassen",
+          "title": "verpassen",
+          "article": "verb",
+          "translation": "пропускать, опаздывать на",
+          "definition": "Einen Zeitpunkt oder eine Gelegenheit nicht rechtzeitig erreichen",
+          "example": "Ich habe leider meinen Flug verpasst.",
+          "level": "A2",
+          
+          "connections": {
+            "verbs": ["versäumen", "verfehlen", "zu spät kommen"],
+            "related": ["flug", "zug", "anschluss", "verspätung"],
+            "situations": ["Flughafen", "Bahnhof", "Termin", "Verabredung"]
+          },
+          
+          "synonyms": ["versäumen", "verfehlen", "verlieren", "verpennen"],
+          "antonyms": ["erreichen", "schaffen", "einhalten", "treffen"],
+          
+          "verb_management": {
+            "prepositions": ["verpassen um", "verpassen wegen"],
+            "cases": ["Akkusativ"],
+            "examples": [
+              "Ich habe den Zug um 5 Minuten verpasst.",
+              "Sie hat den Flug wegen Staus verpasst.",
+              "Er verpasst immer wichtige Termine."
+            ]
+          },
+          
+          "phrases": [
+            "knapp verpassen",
+            "den Anschluss verpassen",
+            "eine Chance verpassen"
+          ],
+          
+          "context": "Stressige Situation beim Reisen. Oft durch Verspätungen, Verkehr oder falsche Planung verursacht."
+        }
+      }
+    },
+
+    "vorort": {
+      "id": "vorort",
+      "title": "Vor Ort",
+      "description": "Am Reiseziel",
+      "words": {
+        "empfehlen": {
+          "id": "empfehlen",
+          "title": "empfehlen",
+          "article": "verb",
+          "translation": "рекомендовать, советовать",
+          "definition": "Jemandem etwas als gut oder geeignet vorschlagen",
+          "example": "Können Sie mir ein gutes Restaurant empfehlen?",
+          "level": "A2",
+          
+          "connections": {
+            "verbs": ["vorschlagen", "raten", "weiterempfehlen"],
+            "related": ["restaurant", "hotel", "tipp", "rat"],
+            "situations": ["Reiseführer", "Lokale", "Hotelrezeption", "Freunde"]
+          },
+          
+          "synonyms": ["vorschlagen", "raten", "anpreisen", "loben"],
+          "antonyms": ["abraten", "warnen", "kritisieren"],
+          
+          "verb_management": {
+            "prepositions": ["empfehlen für", "empfehlen als", "empfehlen zu"],
+            "cases": ["Akkusativ + Dativ"],
+            "examples": [
+              "Ich empfehle dir dieses Hotel.",
+              "Sie empfiehlt es als Geheimtipp.",
+              "Er empfiehlt den Wein zum Essen."
+            ]
+          },
+          
+          "phrases": [
+            "wärmstens empfehlen",
+            "weiterempfehlen",
+            "etwas empfehlenswert finden"
+          ],
+          
+          "context": "Wichtig für persönliche Erfahrungen und Tipps. Lokale Empfehlungen sind oft besser als Reiseführer."
+        },
+
+        "genießen": {
+          "id": "genießen",
+          "title": "genießen",
+          "article": "verb",
+          "translation": "наслаждаться",
+          "definition": "Etwas mit Freude und Bewusstsein erleben oder konsumieren",
+          "example": "Wir genießen die herrliche Aussicht.",
+          "level": "B1",
+          
+          "connections": {
+            "verbs": ["genießen", "auskosten", "sich erfreuen"],
+            "related": ["urlaub", "essen", "ausblick", "entspannung"],
+            "situations": ["Restaurant", "Strand", "Aussichtspunkt", "Wellness"]
+          },
+          
+          "synonyms": ["auskosten", "sich erfreuen", "schwelgen", "sich gönnen"],
+          "antonyms": ["leiden", "ertragen", "durchstehen"],
+          
+          "verb_management": {
+            "prepositions": ["genießen mit", "genießen bei", "genießen in"],
+            "cases": ["Akkusativ"],
+            "examples": [
+              "Sie genießt den Urlaub in vollen Zügen.",
+              "Wir genießen das Essen bei Kerzenschein.",
+              "Er genießt die Ruhe am Meer."
+            ]
+          },
+          
+          "phrases": [
+            "in vollen Zügen genießen",
+            "die Ruhe genießen",
+            "etwas zu genießen wissen"
+          ],
+          
+          "context": "Zentraler Begriff für Urlaubserlebnisse. Geht über einfaches Erleben hinaus - bewusstes Wahrnehmen."
+        }
+      }
+    }
+  }
+}
