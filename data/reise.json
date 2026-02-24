@@ -1,310 +1,657 @@
 {
-  "sections": {
-    "planung": {
-      "id": "planung",
-      "title": "Planung",
-      "description": "Reisevorbereitung und Buchungen",
-      "words": {
-        "buchung": {
-          "id": "buchung",
-          "title": "die Buchung",
-          "article": "die",
-          "translation": "бронирование",
-          "definition": "Reservierung eines Services wie Hotel, Flug oder Mietwagen",
-          "example": "Ich habe eine Buchung für drei Nächte im Hotel Atlantic bestätigt.",
-          "level": "A2",
-          
-          "connections": {
-            "verbs": ["tätigen", "stornieren", "bestätigen"],
-            "related": ["unterkunft", "flug", "hotel", "reservierung"],
-            "situations": ["Rezeption", "Online-Plattform", "Reisebüro"]
-          },
-          
-          "synonyms": ["Reservierung", "Vorbestellung", "Registrierung"],
-          "antonyms": ["Stornierung", "Absage", "Kündigung"],
-          
-          "collocations": {
-            "adjectives": ["frühzeitige", "online", "verbindliche", "letzte"],
-            "verbs": ["eine Buchung tätigen", "eine Buchung stornieren", "eine Buchung bestätigen"]
-          },
-          
-          "phrases": [
-            "eine Buchung vornehmen",
-            "eine Buchung rückgängig machen",
-            "die Buchung ist verbindlich"
-          ],
-          
-          "context": "Wird verwendet bei der Planung von Reisen, insbesondere für Unterkünfte und Transportmittel. Oft im Zusammenhang mit Online-Portalen wie Booking.com oder Expedia."
-        },
-
-        "unterkunft": {
-          "id": "unterkunft",
-          "title": "die Unterkunft",
-          "article": "die",
-          "translation": "жилье, место проживания",
-          "definition": "Ein Ort, an dem man während einer Reise übernachtet",
-          "example": "Wir suchen noch eine günstige Unterkunft in der Innenstadt.",
-          "level": "A1",
-          
-          "connections": {
-            "verbs": ["buchen", "reservieren", "finden", "weiterempfehlen"],
-            "related": ["hotel", "hostel", "zimmer", "buchung", "übernachtung"],
-            "situations": ["Booking.com", "Airbnb", "Rezeption", "Stadtzentrum"]
-          },
-          
-          "synonyms": ["Quartier", "Beherbergung", "Logis", "Hotelzimmer"],
-          "antonyms": ["Obdachlosigkeit", "Heimat", "Wohnung"],
-          
-          "collocations": {
-            "adjectives": ["günstige", "komfortable", "zentrale", "einfache"],
-            "verbs": ["eine Unterkunft buchen", "eine Unterkunft suchen", "eine Unterkunft empfehlen"]
-          },
-          
-          "phrases": [
-            "Unterkunft mit Frühstück",
-            "Unterkunft auf dem Land",
-            "Unterkunft für eine Nacht"
-          ],
-          
-          "context": "Wichtigster Bestandteil jeder Reiseplanung. Kann von einfachen Hostels bis zu Luxushotels reichen. Preis und Lage sind entscheidende Faktoren."
-        },
-
-        "buchen": {
-          "id": "buchen",
-          "title": "buchen",
-          "article": "verb",
-          "translation": "бронировать, заказывать",
-          "definition": "Etwas für einen späteren Zeitpunkt reservieren oder bestellen",
-          "example": "Ich möchte einen Flug nach Berlin buchen.",
-          "level": "A1",
-          
-          "connections": {
-            "verbs": ["reservieren", "bestellen", "planen"],
-            "related": ["buchung", "unterkunft", "flug", "ticket"],
-            "situations": ["Online", "Reisebüro", "Telefonisch"]
-          },
-          
-          "synonyms": ["reservieren", "bestellen", "vorbestellen", "ankreuzen"],
-          "antonyms": ["stornieren", "absagen", "abbestellen"],
-          
-          "verb_management": {
-            "prepositions": ["buchen für", "buchen über", "buchen bei"],
-            "cases": ["Akkusativ"],
-            "examples": [
-              "Ich buche ein Hotel für nächste Woche.",
-              "Sie hat den Flug über das Internet gebucht.",
-              "Er bucht bei einer bekannten Airline."
-            ]
-          },
-          
-          "phrases": [
-            "rechtzeitig buchen",
-            "online buchen",
-            "telefonisch buchen"
-          ],
-          
-          "context": "Zentraler Begriff bei Reiseplanungen. Heute meist online über Websites oder Apps. Frühzeitiges Buchen kann Geld sparen."
-        },
-
-        "stornieren": {
-          "id": "stornieren",
-          "title": "stornieren",
-          "article": "verb",
-          "translation": "отменять, аннулировать",
-          "definition": "Eine bereits getätigte Buchung oder Bestellung rückgängig machen",
-          "example": "Leider muss ich meine Buchung stornieren.",
-          "level": "B1",
-          
-          "connections": {
-            "verbs": ["abbrechen", "rückgängig machen", "kündigen"],
-            "related": ["buchung", "rücktritt", "stornierung", "gebühr"],
-            "situations": ["Kundenservice", "Online-Portal", "Per E-Mail"]
-          },
-          
-          "synonyms": ["abbrechen", "annullieren", "rückgängig machen", "aufheben"],
-          "antonyms": ["buchen", "bestätigen", "verlängern"],
-          
-          "verb_management": {
-            "prepositions": ["stornieren bis", "stornieren bei", "stornieren über"],
-            "cases": ["Akkusativ"],
-            "examples": [
-              "Sie können bis 24 Stunden vorher stornieren.",
-              "Ich habe die Reservierung beim Hotel storniert.",
-              "Stornieren Sie über unsere Website."
-            ]
-          },
-          
-          "phrases": [
-            "kostenlos stornieren",
-            "kurzfristig stornieren",
-            "eine Stornierung vornehmen"
-          ],
-          
-          "context": "Wichtig bei flexiblen Reiseplänen. Oft mit Fristen und Gebühren verbunden. Flexibilität kann teurer sein."
+    "sections": {
+        "planung": {
+        "id": "planung",
+        "title": "Reiseplanung & -arten",
+        "description": "Verschiedene Reisearten und die ersten Schritte der Planung.",
+        "words": {
+            "reise": {
+            "id": "reise",
+            "title": "die Reise",
+            "article": "die",
+            "translation": "путешествие, поездка",
+            "definition": "Eine Fahrt oder ein Aufenthalt an einem Ort, der nicht der ständige Wohnsitz ist, oft zu Erholungs-, Besuchs- oder Geschäftszwecken.",
+            "example": "Unsere Reise nach Italien war wunderschön.",
+            "level": "A1",
+            "connections": {
+                "verbs": ["machen", "planen", "unternehmen", "antreten", "verschieben", "verlegen", "vertragen"],
+                "related": ["urlaub", "ausflug", "trip", "reisebüro"],
+                "situations": ["Urlaubsplanung", "Gespräch mit Freunden", "Reisebüro"]
+            },
+            "synonyms": ["Fahrt", "Tour", "Trip"],
+            "antonyms": ["Aufenthalt zu Hause", "Heimreise"],
+            "collocations": {
+                "adjectives": ["kurze", "lange", "angenehme", "erholsame", "geschäftlich"],
+                "verbs": ["eine Reise machen", "eine Reise planen", "eine Reise antreten", "eine Reise verschieben"]
+            },
+            "phrases": [
+                "Gute Reise!",
+                "auf Reisen gehen",
+                "eine Reise wert sein"
+            ],
+            "context": "Eines der grundlegendsten Wörter im Themenfeld Tourismus und Freizeit. Beschreibt jede Art von längerer Fahrt an einen anderen Ort."
+            },
+            "pauschalreise": {
+            "id": "pauschalreise",
+            "title": "die Pauschalreise",
+            "article": "die",
+            "translation": "пакетный тур, турпутевка",
+            "definition": "Eine vom Reisebüro oder Reiseveranstalter organisierte Reise, bei der die Kosten für Fahrt, Unterkunft und oft auch Verpflegung pauschal berechnet werden.",
+            "example": "Wir haben eine günstige Pauschalreise nach Mallorca gebucht.",
+            "level": "B1",
+            "connections": {
+                "verbs": ["buchen", "antreten", "stornieren"],
+                "related": ["reisebüro", "reiseveranstalter", "last-minute-angebot", "unterkunft"],
+                "situations": ["Reisebüro", "Online-Buchung"]
+            },
+            "synonyms": ["Arrangement", "Package-Tour"],
+            "antonyms": ["Individualreise"],
+            "collocations": {
+                "adjectives": ["günstig", "all-inclusive", "gebucht"],
+                "verbs": ["eine Pauschalreise buchen"]
+            },
+            "phrases": [
+                "eine Pauschalreise buchen",
+                "die Pauschalreise beinhaltet alles"
+            ],
+            "context": "Besonders beliebt für Badeurlaub. Der Begriff 'pauschal' bedeutet hier 'im Ganzen, ohne Spezifizierung'."
+            },
+            "kreuzfahrt": {
+            "id": "kreuzfahrt",
+            "title": "die Kreuzfahrt",
+            "article": "die",
+            "translation": "круиз",
+            "definition": "Eine Seereise auf einem (Luxus-)Schiff, das ein Meer oder größeres Binnengewässer befährt und verschiedene Häfen anläuft.",
+            "example": "Auf der Kreuzfahrt konnten wir jeden Tag eine neue Stadt besichtigen.",
+            "level": "B1",
+            "connections": {
+                "verbs": ["machen", "buchen", "unternehmen"],
+                "related": ["schiff", "hafen", "rundreise"],
+                "situations": ["Traumreise", "Luxusurlaub"]
+            },
+            "synonyms": ["Schiffsreise"],
+            "antonyms": [],
+            "collocations": {
+                "adjectives": ["luxuriös", "mehrtägig", "traumhaft"],
+                "verbs": ["eine Kreuzfahrt machen"]
+            },
+            "phrases": [
+                "eine Kreuzfahrt buchen",
+                "an einer Kreuzfahrt teilnehmen"
+            ],
+            "context": "Oft verbunden mit Luxus und dem Besuch mehrerer Orte, ohne ständig das Hotel wechseln zu müssen."
+            },
+            "städtereise": {
+            "id": "städtereise",
+            "title": "die Städtereise",
+            "article": "die",
+            "translation": "поездка в город",
+            "definition": "Eine Reise, deren Hauptzweck der Besuch und die Besichtigung einer oder mehrerer Städte ist.",
+            "example": "Für unser Jubiläum machen wir eine Städtereise nach Prag.",
+            "level": "A2",
+            "connections": {
+                "verbs": ["machen", "planen", "unternehmen"],
+                "related": ["rundreise", "besichtigung", "kultur"],
+                "situations": ["Kurztrip", "Wochenendreise"]
+            },
+            "synonyms": ["Kulturreise"],
+            "antonyms": ["Badeurlaub"],
+            "collocations": {
+                "adjectives": ["romantisch", "kulturell"],
+                "verbs": ["eine Städtereise machen"]
+            },
+            "phrases": [
+                "eine Städtereise unternehmen"
+            ],
+            "context": "Ideal, um das kulturelle Angebot einer Metropole kennenzulernen."
+            },
+            "rundreise": {
+            "id": "rundreise",
+            "title": "die Rundreise",
+            "article": "die",
+            "translation": "круговая поездка, тур",
+            "definition": "Eine Besichtigungsfahrt mit Rückkehr zum Ausgangspunkt.",
+            "example": "Mit dem Bus kann man eine schöne Rundreise durch die Toskana machen.",
+            "level": "B1",
+            "connections": {
+                "verbs": ["machen", "buchen"],
+                "related": ["rundfahrt", "bus", "besichtigung"],
+                "situations": ["Organisierte Gruppenreise"]
+            },
+            "synonyms": ["Rundfahrt"],
+            "antonyms": ["Streckenreise"],
+            "collocations": {
+                "adjectives": ["organisiert", "mehrtägig"],
+                "verbs": ["eine Rundreise machen"]
+            },
+            "phrases": [
+                "eine Rundreise durch ..."
+            ],
+            "context": "Häufig angebotene Form von Studienreisen, bei der man einen Überblick über eine Region bekommt."
+            },
+            "reisebüro": {
+            "id": "reisebuero",
+            "title": "das Reisebüro",
+            "article": "das",
+            "translation": "туристическое агентство",
+            "definition": "Ein Unternehmen, das Reisen vermittelt, Fahrkarten verkauft, Buchungen aufnimmt und Beratungen über Reisewege und -ziele durchführt.",
+            "example": "Im Reisebüro haben wir uns über Urlaubsangebote informiert.",
+            "level": "A2",
+            "connections": {
+                "verbs": ["gehen", "anrufen", "beraten"],
+                "related": ["reiseveranstalter", "reiseprospekt", "buchung"],
+                "situations": ["Reisevorbereitung", "Beratung"]
+            },
+            "synonyms": ["Reiseagentur"],
+            "antonyms": [],
+            "collocations": {
+                "adjectives": ["örtlich", "online"],
+                "verbs": ["ins Reisebüro gehen", "ein Reisebüro empfehlen"]
+            },
+            "phrases": [
+                "sich im Reisebüro beraten lassen"
+            ],
+            "context": "Der klassische Ort für Reisevorbereitungen vor dem Zeitalter des Internets, heute oft Spezialist für besondere Reisen."
+            },
+            "last-minute-angebot": {
+            "id": "last-minute-angebot",
+            "title": "das Last-Minute-Angebot",
+            "article": "das",
+            "translation": "горящая путевка, предложение в последнюю минуту",
+            "definition": "Eine Pauschalreise, die kurz vor Reisebeginn verbilligt angeboten wird.",
+            "example": "Wir haben ein günstiges Last-Minute-Angebot für die Türkei genutzt.",
+            "level": "B1",
+            "connections": {
+                "verbs": ["nutzen", "buchen", "finden"],
+                "related": ["pauschalreise", "reisebüro", "schnäppchen"],
+                "situations": ["Spontanurlaub", "Schnäppchenjagd"]
+            },
+            "synonyms": ["Schnäppchenreise", "Spontanangebot"],
+            "antonyms": ["Frühbucherangebot"],
+            "collocations": {
+                "adjectives": ["günstig", "spontan"],
+                "verbs": ["ein Last-Minute-Angebot buchen", "ein Last-Minute-Angebot nutzen"]
+            },
+            "phrases": [
+                "ein Last-Minute-Angebot wahrnehmen"
+            ],
+            "context": "Beliebt bei spontanen Reisenden. Der Preis ist oft reduziert, um die letzten Plätze zu füllen."
+            }
         }
-      }
-    },
-
-    "unterwegs": {
-      "id": "unterwegs",
-      "title": "Unterwegs",
-      "description": "Transport und Reise",
-      "words": {
-        "ankommen": {
-          "id": "ankommen",
-          "title": "ankommen",
-          "article": "verb",
-          "translation": "прибывать, приезжать",
-          "definition": "Am Zielort einer Reise eintreffen",
-          "example": "Wir kommen morgen um 10 Uhr am Flughafen an.",
-          "level": "A1",
-          
-          "connections": {
-            "verbs": ["eintreffen", "landen", "erreichen"],
-            "related": ["abreise", "flughafen", "bahnhof", "ziel"],
-            "situations": ["Flughafen", "Bahnhof", "Hotel", "Treffpunkt"]
-          },
-          
-          "synonyms": ["eintreffen", "erreichen", "landen", "einlaufen"],
-          "antonyms": ["abfahren", "abreisen", "verlassen", "starten"],
-          
-          "verb_management": {
-            "prepositions": ["ankommen in", "ankommen an", "ankommen bei"],
-            "cases": ["Dativ (mit Präposition)"],
-            "examples": [
-              "Wir kommen in Berlin an.",
-              "Der Zug kommt am Bahnhof an.",
-              "Sie kommt bei Freunden an."
-            ]
-          },
-          
-          "phrases": [
-            "pünktlich ankommen",
-            "mit Verspätung ankommen",
-            "am Ziel ankommen"
-          ],
-          
-          "context": "Freudiger Moment jeder Reise. Pünktlichkeit ist oft wichtig. Bei Verspätungen entstehen Probleme."
         },
-
-        "verpassen": {
-          "id": "verpassen",
-          "title": "verpassen",
-          "article": "verb",
-          "translation": "пропускать, опаздывать на",
-          "definition": "Einen Zeitpunkt oder eine Gelegenheit nicht rechtzeitig erreichen",
-          "example": "Ich habe leider meinen Flug verpasst.",
-          "level": "A2",
-          
-          "connections": {
-            "verbs": ["versäumen", "verfehlen", "zu spät kommen"],
-            "related": ["flug", "zug", "anschluss", "verspätung"],
-            "situations": ["Flughafen", "Bahnhof", "Termin", "Verabredung"]
-          },
-          
-          "synonyms": ["versäumen", "verfehlen", "verlieren", "verpennen"],
-          "antonyms": ["erreichen", "schaffen", "einhalten", "treffen"],
-          
-          "verb_management": {
-            "prepositions": ["verpassen um", "verpassen wegen"],
-            "cases": ["Akkusativ"],
-            "examples": [
-              "Ich habe den Zug um 5 Minuten verpasst.",
-              "Sie hat den Flug wegen Staus verpasst.",
-              "Er verpasst immer wichtige Termine."
-            ]
-          },
-          
-          "phrases": [
-            "knapp verpassen",
-            "den Anschluss verpassen",
-            "eine Chance verpassen"
-          ],
-          
-          "context": "Stressige Situation beim Reisen. Oft durch Verspätungen, Verkehr oder falsche Planung verursacht."
+        "reisearten": {
+        "id": "reisearten",
+        "title": "Kurzreisen & Ausflüge",
+        "description": "Kleinere Reiseformen, Tagesausflüge und spontane Fahrten.",
+        "words": {
+            "trip": {
+            "id": "trip",
+            "title": "der Trip",
+            "article": "der",
+            "translation": "поездка, трип",
+            "definition": "Eine kurzfristig, ohne große Vorbereitung unternommene Reise, Fahrt oder ein Ausflug.",
+            "example": "Am Wochenende machen wir einen Trip an die Nordsee.",
+            "level": "B1",
+            "connections": {
+                "verbs": ["machen", "planen", "unternehmen"],
+                "related": ["ausflug", "spritztour", "reise"],
+                "situations": ["Wochenendplanung", "Spontaner Ausflug"]
+            },
+            "synonyms": ["Ausflug", "Tour", "Kurztrip"],
+            "antonyms": [],
+            "collocations": {
+                "adjectives": ["kurzer", "spontaner", "schöner"],
+                "verbs": ["einen Trip machen", "einen Trip unternehmen"]
+            },
+            "phrases": [
+                "einen Trip ans Meer machen"
+            ],
+            "context": "Wird oft im Englischen entlehnt und beschreibt einen kurzen, lockeren Ausflug."
+            },
+            "spritztour": {
+            "id": "spritztour",
+            "title": "die Spritztour",
+            "article": "die",
+            "translation": "прогулка (на машине), покатушки",
+            "definition": "Eine kurze Vergnügungsfahrt, besonders mit einem privaten Fahrzeug.",
+            "example": "Bei dem schönen Wetter machen wir eine Spritztour mit dem Cabrio.",
+            "level": "B1",
+            "connections": {
+                "verbs": ["machen", "unternehmen"],
+                "related": ["ausflug", "fahrt", "auto"],
+                "situations": ["Freizeit", "Mit dem Auto unterwegs"]
+            },
+            "synonyms": ["Vergnügungsfahrt", "Ausfahrt"],
+            "antonyms": [],
+            "collocations": {
+                "adjectives": ["schön", "klein"],
+                "verbs": ["eine Spritztour machen"]
+            },
+            "phrases": [
+                "mit dem Motorrad eine Spritztour machen"
+            ],
+            "context": "Eher umgangssprachlich und beschreibt eine Fahrt, die vor allem dem Vergnügen und nicht dem Erreichen eines Ziels dient."
+            },
+            "stippvisite": {
+            "id": "stippvisite",
+            "title": "die Stippvisite",
+            "article": "die",
+            "translation": "краткий визит",
+            "definition": "Ein kurzer Besuch bei jemandem oder an einem Ort.",
+            "example": "Bei unserer Rom-Reise haben wir auch eine Stippvisite im Vatikan gemacht.",
+            "level": "C1",
+            "connections": {
+                "verbs": ["machen", "abstatten"],
+                "related": ["besuch", "kurzreise"],
+                "situations": ["Besuch bei Freunden", "Kurzer Zwischenstopp"]
+            },
+            "synonyms": ["Kurzbesuch"],
+            "antonyms": ["Längerer Aufenthalt"],
+            "collocations": {
+                "adjectives": ["kurz"],
+                "verbs": ["eine Stippvisite machen", "eine Stippvisite abstatten"]
+            },
+            "phrases": [
+                "bei jemandem eine Stippvisite machen"
+            ],
+            "context": "Wird oft scherzhaft verwendet, um einen sehr kurzen Besuch zu beschreiben."
+            },
+            "ausflug": {
+            "id": "ausflug",
+            "title": "der Ausflug",
+            "article": "der",
+            "translation": "экскурсия, прогулка, вылазка",
+            "definition": "Ein kürzerer, meist eintägiger Aufenthalt außerhalb des Wohnorts zu Erholungs- oder Besichtigungszwecken.",
+            "example": "Die Klasse macht einen Ausflug in den Zoo.",
+            "level": "A1",
+            "connections": {
+                "verbs": ["machen", "unternehmen", "planen"],
+                "related": ["wanderung", "fahrt", "picknick"],
+                "situations": ["Wochenende", "Schulveranstaltung", "Familie"]
+            },
+            "synonyms": ["Trip", "Tour"],
+            "antonyms": [],
+            "collocations": {
+                "adjectives": ["schön", "lehrreich", "Tages-"],
+                "verbs": ["einen Ausflug machen", "einen Ausflug unternehmen"]
+            },
+            "phrases": [
+                "einen Ausflug ins Grüne machen"
+            ],
+            "context": "Ein sehr häufiges Wort für jegliche Art von kurzem Freizeitausflug."
+            }
         }
-      }
-    },
-
-    "vorort": {
-      "id": "vorort",
-      "title": "Vor Ort",
-      "description": "Am Reiseziel",
-      "words": {
-        "empfehlen": {
-          "id": "empfehlen",
-          "title": "empfehlen",
-          "article": "verb",
-          "translation": "рекомендовать, советовать",
-          "definition": "Jemandem etwas als gut oder geeignet vorschlagen",
-          "example": "Können Sie mir ein gutes Restaurant empfehlen?",
-          "level": "A2",
-          
-          "connections": {
-            "verbs": ["vorschlagen", "raten", "weiterempfehlen"],
-            "related": ["restaurant", "hotel", "tipp", "rat"],
-            "situations": ["Reiseführer", "Lokale", "Hotelrezeption", "Freunde"]
-          },
-          
-          "synonyms": ["vorschlagen", "raten", "anpreisen", "loben"],
-          "antonyms": ["abraten", "warnen", "kritisieren"],
-          
-          "verb_management": {
-            "prepositions": ["empfehlen für", "empfehlen als", "empfehlen zu"],
-            "cases": ["Akkusativ + Dativ"],
-            "examples": [
-              "Ich empfehle dir dieses Hotel.",
-              "Sie empfiehlt es als Geheimtipp.",
-              "Er empfiehlt den Wein zum Essen."
-            ]
-          },
-          
-          "phrases": [
-            "wärmstens empfehlen",
-            "weiterempfehlen",
-            "etwas empfehlenswert finden"
-          ],
-          
-          "context": "Wichtig für persönliche Erfahrungen und Tipps. Lokale Empfehlungen sind oft besser als Reiseführer."
         },
-
-        "genießen": {
-          "id": "genießen",
-          "title": "genießen",
-          "article": "verb",
-          "translation": "наслаждаться",
-          "definition": "Etwas mit Freude und Bewusstsein erleben oder konsumieren",
-          "example": "Wir genießen die herrliche Aussicht.",
-          "level": "B1",
-          
-          "connections": {
-            "verbs": ["genießen", "auskosten", "sich erfreuen"],
-            "related": ["urlaub", "essen", "ausblick", "entspannung"],
-            "situations": ["Restaurant", "Strand", "Aussichtspunkt", "Wellness"]
-          },
-          
-          "synonyms": ["auskosten", "sich erfreuen", "schwelgen", "sich gönnen"],
-          "antonyms": ["leiden", "ertragen", "durchstehen"],
-          
-          "verb_management": {
-            "prepositions": ["genießen mit", "genießen bei", "genießen in"],
-            "cases": ["Akkusativ"],
-            "examples": [
-              "Sie genießt den Urlaub in vollen Zügen.",
-              "Wir genießen das Essen bei Kerzenschein.",
-              "Er genießt die Ruhe am Meer."
-            ]
-          },
-          
-          "phrases": [
-            "in vollen Zügen genießen",
-            "die Ruhe genießen",
-            "etwas zu genießen wissen"
-          ],
-          
-          "context": "Zentraler Begriff für Urlaubserlebnisse. Geht über einfaches Erleben hinaus - bewusstes Wahrnehmen."
+        "fortbewegung": {
+        "id": "fortbewegung",
+        "title": "Fortbewegung & Transport",
+        "description": "Arten zu reisen und Verkehrsmittel.",
+        "words": {
+            "reisen": {
+            "id": "reisen",
+            "title": "reisen",
+            "article": "verb",
+            "translation": "путешествовать",
+            "definition": "Sich an einen entfernten Ort begeben und dort für eine gewisse Zeit aufhalten, oft zu Erholungszwecken.",
+            "example": "Er reist sehr gern und war schon auf allen Kontinenten.",
+            "level": "A1",
+            "connections": {
+                "verbs": [],
+                "related": ["reise", "fliegen", "fahren", "wandern"],
+                "situations": ["Urlaub", "Geschäftsreise"]
+            },
+            "synonyms": ["unterwegs sein", "auf Reisen sein", "verreisen"],
+            "antonyms": ["daheim bleiben"],
+            "collocations": {
+                "adjectives": ["gern", "viel", "allein", "zusammen"],
+                "verbs": []
+            },
+            "phrases": [
+                "in ein fernes Land reisen",
+                "um die Welt reisen"
+            ],
+            "context": "Das grundlegende Verb für das Thema Reisen."
+            },
+            "trampen": {
+            "id": "trampen",
+            "title": "trampen",
+            "article": "",
+            "translation": "путешествовать автостопом",
+            "definition": "(Durch Winken oder Ähnliches) Autos anhalten und sich auf eine Fahrt, Reise mitnehmen lassen; per Anhalter fahren.",
+            "example": "Früher sind wir durch ganz Europa getrampt.",
+            "level": "B1",
+            "connections": {
+                "verbs": [],
+                "related": ["anhalter", "mitnehmen", "reisen"],
+                "situations": ["Abenteuerreise", "Sparen"]
+            },
+            "synonyms": ["per Anhalter fahren"],
+            "antonyms": ["mit dem eigenen Auto fahren"],
+            "collocations": {
+                "adjectives": [],
+                "verbs": ["per Anhalter trampen", "durchs Land trampen"]
+            },
+            "phrases": [
+                "quer durch Deutschland trampen"
+            ],
+            "context": "Eine beliebte, kostengünstige Reiseform, besonders bei jungen Leuten, die oft mit Abenteuerlust verbunden ist."
+            },
+            "trekking": {
+            "id": "trekking",
+            "title": "das Trekking",
+            "article": "das",
+            "translation": "треккинг",
+            "definition": "Eine (von einem Reiseunternehmen organisierte) mehrtägige Wanderung in einer kleinen Gruppe mit Führung durch oft unwegsames Gebiet, meist im Hochgebirge.",
+            "example": "Wir gehen auf Trekking-Tour im Himalaja.",
+            "level": "B2",
+            "connections": {
+                "verbs": ["machen", "gehen", "unternehmen"],
+                "related": ["wandern", "berg", "expedition"],
+                "situations": ["Abenteuerurlaub", "Sporturlaub"]
+            },
+            "synonyms": ["Expedition", "Wanderung"],
+            "antonyms": [],
+            "collocations": {
+                "adjectives": ["mehrtägig", "anspruchsvoll"],
+                "verbs": ["Trekking machen", "auf Trekking-Tour gehen"]
+            },
+            "phrases": [
+                "eine Trekking-Tour unternehmen"
+            ],
+            "context": "Eine spezielle, oft anstrengendere Form des Wanderns in abgelegenen Gebieten."
+            }
         }
-      }
+        },
+        "erlebnisse": {
+        "id": "erlebnisse",
+        "title": "Erlebnisse & Eindrücke",
+        "description": "Wörter, um Reiseerfahrungen und Gefühle zu beschreiben.",
+        "words": {
+            "erlebnis": {
+            "id": "erlebnis",
+            "title": "das Erlebnis",
+            "article": "das",
+            "translation": "переживание, событие, приключение",
+            "definition": "Ein Ereignis, das man selbst erfährt und das einen starken Eindruck hinterlässt.",
+            "example": "Die Begegnung mit den wilden Tieren war ein unvergessliches Erlebnis.",
+            "level": "A2",
+            "connections": {
+                "verbs": ["haben", "erleben", "vergessen"],
+                "related": ["reiseerlebnisse", "eindruck", "abenteuer"],
+                "situations": ["Erzählen nach dem Urlaub", "Tagebuch"]
+            },
+            "synonyms": ["Ereignis", "Abenteuer", "Geschehnis"],
+            "antonyms": [],
+            "collocations": {
+                "adjectives": ["schön", "toll", "unvergesslich", "aufregend"],
+                "verbs": ["ein Erlebnis haben", "ein Erlebnis vergessen"]
+            },
+            "phrases": [
+                "ein Erlebnis fürs Leben"
+            ],
+            "context": "Beschreibt die subjektive und emotionale Seite einer Reise, nicht nur die Fakten."
+            },
+            "eindruck": {
+            "id": "eindruck",
+            "title": "der Eindruck",
+            "article": "der",
+            "translation": "впечатление",
+            "definition": "Die Wirkung, die jemand oder etwas auf einen hat; die Vorstellung, die man von etwas bekommt.",
+            "example": "Die Altstadt hat einen großen Eindruck auf mich gemacht.",
+            "level": "B1",
+            "connections": {
+                "verbs": ["machen", "hinterlassen", "gewinnen", "beeindrucken"],
+                "related": ["erlebnis", "wirkung"],
+                "situations": ["Nach der Besichtigung", "Reflexion"]
+            },
+            "synonyms": ["Empfindung", "Gefühl"],
+            "antonyms": [],
+            "collocations": {
+                "adjectives": ["groß", "bleibend", "ersten"],
+                "verbs": ["einen Eindruck machen", "einen Eindruck gewinnen", "von etw. beeindruckt sein"]
+            },
+            "phrases": [
+                "sich einen Eindruck verschaffen",
+                "unter dem Eindruck von etwas stehen"
+            ],
+            "context": "Oft im Plural 'Eindrücke' verwendet, um die Gesamtheit dessen zu beschreiben, was man auf einer Reise wahrgenommen hat."
+            }
+        }
+        },
+        "grenze": {
+        "id": "grenze",
+        "title": "Grenze & Zoll",
+        "description": "Formalitäten bei der Ein- und Ausreise, Grenzkontrollen.",
+        "words": {
+            "grenze": {
+            "id": "grenze",
+            "title": "die Grenze",
+            "article": "die",
+            "translation": "граница",
+            "definition": "Die Linie, die zwei Staaten oder Gebiete voneinander trennt.",
+            "example": "Unser Zug hält an der Grenze für die Passkontrolle.",
+            "level": "A2",
+            "connections": {
+                "verbs": ["überschreiten", "passieren", "überqueren", "grenzen an"],
+                "related": ["grenzkontrolle", "zoll", "pass", "visum"],
+                "situations": ["Autofahrt ins Ausland", "Zugreise", "Flughafen"]
+            },
+            "synonyms": ["Staatsgrenze", "Landesgrenze"],
+            "antonyms": ["Inland"],
+            "collocations": {
+                "adjectives": ["deutsch-französisch", "offen", "geschlossen"],
+                "verbs": ["die Grenze überqueren", "an der Grenze warten", "an die Grenze grenzen"]
+            },
+            "phrases": [
+                "jenseits/diesseits der Grenze",
+                "Grenzen überwinden"
+            ],
+            "context": "Ein zentraler Begriff für Reisen ins Ausland. Innerhalb der EU sind die Grenzkontrollen oft aufgehoben."
+            },
+            "pass": {
+            "id": "pass",
+            "title": "der Pass",
+            "article": "der",
+            "translation": "паспорт",
+            "definition": "Ein amtliches Dokument, das die Identität und Staatsangehörigkeit des Inhabers für Reisen ins Ausland bestätigt.",
+            "example": "Ihr Pass ist abgelaufen, Sie müssen einen neuen beantragen.",
+            "level": "A2",
+            "connections": {
+                "verbs": ["vorzeigen", "beantragen", "verlängern", "ablaufen"],
+                "related": ["reisepass", "personalausweis", "visum", "ausweis"],
+                "situations": ["Grenzkontrolle", "Flughafen Check-in", "Hotel"]
+            },
+            "synonyms": ["Reisepass"],
+            "antonyms": [],
+            "collocations": {
+                "adjectives": ["gültig", "ungültig", "abgelaufen"],
+                "verbs": ["den Pass vorzeigen", "der Pass läuft ab", "den Pass verlängern lassen"]
+            },
+            "phrases": [
+                "jemandes Pass wird kontrolliert",
+                "im Pass stehen"
+            ],
+            "context": "Das wichtigste Reisedokument für internationale Reisen. Der Personalausweis reicht innerhalb der EU oft aus."
+            },
+            "visum": {
+            "id": "visum",
+            "title": "das Visum",
+            "article": "das",
+            "translation": "виза",
+            "definition": "Eine amtliche Genehmigung, die die Einreise in ein bestimmtes Land erlaubt.",
+            "example": "Für die Einreise in die USA benötigt man ein Visum.",
+            "level": "B1",
+            "connections": {
+                "verbs": ["beantragen", "erteilen", "verweigern", "verlängern", "ablaufen"],
+                "related": ["pass", "einreise", "konsulat", "botschaft"],
+                "situations": ["Konsulat", "Reisevorbereitung"]
+            },
+            "synonyms": ["Einreiseerlaubnis"],
+            "antonyms": [],
+            "collocations": {
+                "adjectives": ["gültig", "abgelaufen", "kostenlos"],
+                "verbs": ["ein Visum beantragen", "ein Visum erteilen", "das Visum läuft ab"]
+            },
+            "phrases": [
+                "einen Antrag auf Erteilung eines Visums stellen"
+            ],
+            "context": "Die Anforderungen für Visa sind sehr unterschiedlich und reichen von kostenlosen Touristenvisa bis zu aufwändigen Verfahren."
+            },
+            "zoll": {
+            "id": "zoll",
+            "title": "der Zoll",
+            "article": "der",
+            "translation": "таможня",
+            "definition": "Eine Behörde, die die Ein- und Ausfuhr von Waren überwacht und gegebenenfalls Abgaben (Zölle) erhebt.",
+            "example": "Für diese Ware müssen Sie Zoll zahlen.",
+            "level": "B1",
+            "connections": {
+                "verbs": ["zahlen", "kontrollieren", "durchführen"],
+                "related": ["zollkontrolle", "zollamt", "grenze"],
+                "situations": ["Flughafen", "Grenzübergang"]
+            },
+            "synonyms": [],
+            "antonyms": [],
+            "collocations": {
+                "adjectives": ["hoch"],
+                "verbs": ["Zoll zahlen", "durch den Zoll gehen"]
+            },
+            "phrases": [
+                "etwas beim Zoll anmelden"
+            ],
+            "context": "Nach der Grenzkontrolle (Passkontrolle) kommt oft die Zollkontrolle für das Gepäck."
+            },
+            "einreise": {
+            "id": "einreise",
+            "title": "die Einreise",
+            "article": "die",
+            "translation": "въезд, въезд в страну",
+            "definition": "Der Akt des Eintritts in ein Land, oft im Zusammenhang mit Grenzkontrollen und Visabestimmungen",
+            "example": "Die Einreise nach Deutschland erfordert einen gültigen Reisepass.",
+            "level": "B1",
+            "connections": {
+                "verbs": ["erlauben", "verweigern", "kontrollieren"],
+                "related": ["visum", "grenze", "passkontrolle", "ausländerbehörde"],
+                "situations": ["flughafen", "grenzübergang", "zoll"]
+            },
+            "synonyms": ["Eintritt", "Ankunft", "Übertritt"],
+            "antonyms": ["Ausreise", "Abreise"],
+            "collocations": {
+                "adjectives": ["erfolgreiche", "verbotene", "genehmigte", "uneingeschränkte"],
+                "verbs": ["die Einreise erlauben", "die Einreise verweigern", "die Einreise kontrollieren"]
+            },
+            "phrases": [
+                "die Einreise ist gestattet",
+                "Einreise nur mit Visum",
+                "bei der Einreise werden die Pässe überprüft"
+            ],
+            "context": "Wird verwendet im Zusammenhang mit Reisen, Grenzübergängen und Einwanderungsbestimmungen. Besonders relevant bei der Vorbereitung von Auslandsreisen und beim Studium von Einwanderungsrechten."
+            },
+            "botschaft": {
+            "id": "botschaft",
+            "title": "die Botschaft",
+            "article": "die",
+            "translation": "посольство",
+            "definition": "Die diplomatische Vertretung eines Staates in einem anderen Staat, die für die Vertretung der Interessen und die Unterstützung von Bürgern im Ausland zuständig ist",
+            "example": "Ich habe meinen Pass bei der deutschen Botschaft in Tokio verloren gemeldet.",
+            "level": "B2",
+            "connections": {
+                "verbs": ["besuchen", "kontaktieren", "erreichen"],
+                "related": ["konsulat", "diplomat", "visum", "staatsangehörigkeit"],
+                "situations": ["auslandsaufenthalt", "rechtliche Probleme", "visumanfrage"]
+            },
+            "synonyms": ["Diplomatische Vertretung", "Gesandtschaft"],
+            "antonyms": [],
+            "collocations": {
+                "adjectives": ["deutsche", "amerikanische", "chinesische", "lokale"],
+                "verbs": ["die Botschaft aufsuchen", "sich an die Botschaft wenden", "die Botschaft kontaktieren"]
+            },
+            "phrases": [
+                "sich an die Botschaft wenden",
+                "die Botschaft erreichen",
+                "in der Botschaft einen Termin vereinbaren"
+            ],
+            "context": "Wird verwendet, wenn es um diplomatische Beziehungen, Konsularhilfe oder Visabescheinigungen geht. Wichtig für Reisende, die im Ausland Hilfe benötigen."
+            },
+            "antrag": {
+            "id": "antrag",
+            "title": "der Antrag",
+            "article": "der",
+            "translation": "заявление, заявка",
+            "definition": "Ein formelles Schreiben oder eine Erklärung, mit der man um etwas bittet oder etwas beantragt, zum Beispiel ein Visum oder eine Genehmigung",
+            "example": "Der Antrag auf ein Arbeitsvisum muss alle erforderlichen Dokumente enthalten.",
+            "level": "B1",
+            "connections": {
+                "verbs": ["stellen", "einreichen", "bearbeiten", "genehmigen"],
+                "related": ["formular", "dokumente", "visum", "genehmigung"],
+                "situations": ["einwanderungsbehörde", "konsulat", "amt"]
+            },
+            "synonyms": ["Gesuch", "Bewerbung", "Petition"],
+            "antonyms": ["Widerruf", "Rücknahme"],
+            "collocations": {
+                "adjectives": ["schriftlicher", "formeller", "ausstehender", "erfolgreicher"],
+                "verbs": ["einen Antrag stellen", "einen Antrag einreichen", "einen Antrag bearbeiten"]
+            },
+            "phrases": [
+                "einen Antrag auf Visum stellen",
+                "den Antrag bearbeiten lassen",
+                "der Antrag wurde genehmigt"
+            ],
+            "context": "Wird in behördlichen und administrativen Zusammenhängen verwendet, insbesondere bei Visabewerbungen, Arbeitsgenehmigungen und anderen offiziellen Anliegen."
+            },
+            "kosten": {
+            "id": "kosten",
+            "title": "die Kosten",
+            "article": "die",
+            "translation": "расходы, затраты",
+            "definition": "Geld, das für einen bestimmten Zweck oder eine bestimmte Dienstleistung ausgegeben werden muss",
+            "example": "Die Kosten für die Reise nach Spanien betragen etwa 1 000 Euro.",
+            "level": "A2",
+            "connections": {
+                "verbs": ["tragen", "übernehmen", "decken"],
+                "related": ["preis", "ausgaben", "gebühren", "budget"],
+                "situations": ["reiseplanung", "finanzen", "einkauf"]
+            },
+            "synonyms": ["Ausgaben", "Aufwendungen", "Gebühren"],
+            "antonyms": ["Einnahmen", "Erlöse"],
+            "collocations": {
+                "adjectives": ["hohe", "niedrige", "gesamte", "voraussichtliche"],
+                "verbs": ["die Kosten tragen", "die Kosten decken", "die Kosten übernehmen"]
+            },
+            "phrases": [
+                "die Kosten übernehmen",
+                "Kosten sparen",
+                "die Kosten in Rechnung stellen"
+            ],
+            "context": "Wird in finanziellen Zusammenhängen verwendet, einschließlich Reise-, Lebens- und Geschäftskosten. Wichtig bei Budgetplanung und Kostenkontrolle."
+            },
+            "valuta": {
+            "id": "valuta",
+            "title": "die Valuta",
+            "article": "die",
+            "translation": "валюта",
+            "definition": "Die offizielle Währung eines Landes, die als Bezahlungsmittel dient",
+            "example": "Die Valuta von Japan ist der Yen.",
+            "level": "B1",
+            "connections": {
+                "verbs": ["wechseln", "akzeptieren", "berechnen"],
+                "related": ["währung", "euro", "dollar", "kurs"],
+                "situations": ["bank", "flughafen", "reise"]
+            },
+            "synonyms": ["Währung", "Bezahlungsmittel"],
+            "antonyms": [],
+            "collocations": {
+                "adjectives": ["lokale", "internationale", "stabile", "schwankende"],
+                "verbs": ["die Valuta wechseln", "eine Valuta akzeptieren", "den Valutakurs berechnen"]
+            },
+            "phrases": [
+                "Valuta wechseln",
+                "lokale Valuta verwenden",
+                "der Wechselkurs der Valuta"
+            ],
+            "context": "Wird bei internationalen Transaktionen, Reisen und im Finanzsektor verwendet. Wichtig beim Geldwechsel."
+            }
+        }
+        }
     }
-  }
 }

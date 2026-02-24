@@ -1,0 +1,249 @@
+{
+    "metadata": {
+        "title": "Arbeit & Beruf",
+        "description": "Wichtige Wörter zum Thema Arbeit und Beruf"
+    },
+    "sections": {
+        "berufe": {
+            "id": "berufe",
+            "title": "Berufe",
+            "description": "Wichtige Berufsbezeichnungen.",
+            "words": {
+                "arzt": {
+                    "id": "arzt",
+                    "title": "der Arzt",
+                    "article": "der",
+                    "translation": "врач",
+                    "definition": "Eine Person, die Medizin studiert hat und kranke Menschen behandelt.",
+                    "example": "Mein Arzt hat mir diese Tabletten verschrieben.",
+                    "level": "A1",
+                    "connections": {
+                        "verbs": ["behandeln", "verschreiben", "untersuchen"],
+                        "related": ["krankenhaus", "patient", "medizin"],
+                        "situations": ["Arztbesuch", "Krankenhaus"]
+                    },
+                    "synonyms": ["Mediziner", "Doktor"],
+                    "antonyms": ["Patient"],
+                    "collocations": {
+                        "adjectives": ["behandelnd", "niedergelassen"],
+                        "verbs": ["zum Arzt gehen", "Arzt werden"]
+                    },
+                    "phrases": ["zum Arzt gehen", "der Arzt hat gesagt..."],
+                    "context": "Einer der klassischen Berufe im Gesundheitswesen."
+                },
+                "lehrer": {
+                    "id": "lehrer",
+                    "title": "der Lehrer",
+                    "article": "der",
+                    "translation": "учитель",
+                    "definition": "Eine Person, die anderen Wissen oder Fähigkeiten vermittelt.",
+                    "example": "Mein Lehrer erklärt die Grammatik sehr gut.",
+                    "level": "A1",
+                    "connections": {
+                        "verbs": ["unterrichten", "erklären"],
+                        "related": ["schule", "schüler", "unterricht"],
+                        "situations": ["Schule", "Unterricht"]
+                    },
+                    "synonyms": ["Pädagoge"],
+                    "antonyms": ["Schüler"],
+                    "collocations": {
+                        "adjectives": ["streng", "geduldig"],
+                        "verbs": ["Lehrer sein", "als Lehrer arbeiten"]
+                    },
+                    "phrases": ["Lehrer werden"],
+                    "context": "Hauptberuf im Bildungswesen."
+                }
+            }
+        },
+        "bewerbung": {
+            "id": "bewerbung",
+            "title": "Bewerbung",
+            "description": "Wörter für die Jobsuche.",
+            "words": {
+                "bewerbung": {
+                    "id": "bewerbung",
+                    "title": "die Bewerbung",
+                    "article": "die",
+                    "translation": "заявление (о приеме на работу)",
+                    "definition": "Ein Schreiben, mit dem man sich um eine Arbeitsstelle bewirbt.",
+                    "example": "Ich habe meine Bewerbung gestern abgeschickt.",
+                    "level": "B1",
+                    "connections": {
+                        "verbs": ["schreiben", "abschicken", "einreichen"],
+                        "related": ["lebenslauf", "zeugnis", "vorstellungsgespräch"],
+                        "situations": ["Jobsuche", "Karriere"]
+                    },
+                    "synonyms": ["Bewerbungsschreiben"],
+                    "antonyms": [],
+                    "collocations": {
+                        "adjectives": ["schriftlich", "erfolgreich"],
+                        "verbs": ["eine Bewerbung schreiben"]
+                    },
+                    "phrases": ["eine Bewerbung einreichen"],
+                    "context": "Der erste Schritt im Bewerbungsprozess."
+                },
+                "lebenslauf": {
+                    "id": "lebenslauf",
+                    "title": "der Lebenslauf",
+                    "article": "der",
+                    "translation": "резюме",
+                    "definition": "Eine Zusammenfassung der wichtigsten Stationen im Leben einer Person.",
+                    "example": "Im Lebenslauf stehen meine Schulbildung und Berufserfahrung.",
+                    "level": "B1",
+                    "connections": {
+                        "verbs": ["schreiben", "erstellen"],
+                        "related": ["bewerbung", "zeugnis", "erfahrung"],
+                        "situations": ["Bewerbung"]
+                    },
+                    "synonyms": ["CV"],
+                    "antonyms": [],
+                    "collocations": {
+                        "adjectives": ["tabellarisch", "ausführlich"],
+                        "verbs": ["den Lebenslauf schreiben"]
+                    },
+                    "phrases": ["im Lebenslauf angeben"],
+                    "context": "Wichtiges Dokument bei Bewerbungen."
+                },
+                "vorstellungsgespräch": {
+                    "id": "vorstellungsgespraech",
+                    "title": "das Vorstellungsgespräch",
+                    "article": "das",
+                    "translation": "собеседование",
+                    "definition": "Ein persönliches Gespräch zwischen Arbeitgeber und Bewerber.",
+                    "example": "Morgen habe ich ein Vorstellungsgespräch.",
+                    "level": "B1",
+                    "connections": {
+                        "verbs": ["führen", "haben", "vereinbaren"],
+                        "related": ["bewerbung", "arbeitgeber"],
+                        "situations": ["Jobsuche"]
+                    },
+                    "synonyms": ["Interview", "Bewerbungsgespräch"],
+                    "antonyms": [],
+                    "collocations": {
+                        "adjectives": ["erfolgreich"],
+                        "verbs": ["ein Vorstellungsgespräch führen"]
+                    },
+                    "phrases": ["zum Vorstellungsgespräch gehen"],
+                    "context": "Die entscheidende Phase im Bewerbungsprozess."
+                }
+            }
+        },
+        "arbeitsalltag": {
+            "id": "arbeitsalltag",
+            "title": "Arbeitsalltag",
+            "description": "Typische Wörter am Arbeitsplatz.",
+            "words": {
+                "arbeit": {
+                    "id": "arbeit",
+                    "title": "die Arbeit",
+                    "article": "die",
+                    "translation": "работа",
+                    "definition": "Die Tätigkeit, die man ausübt, um Geld zu verdienen.",
+                    "example": "Ich gehe jeden Tag um 8 Uhr zur Arbeit.",
+                    "level": "A1",
+                    "connections": {
+                        "verbs": ["gehen", "haben", "suchen", "finden"],
+                        "related": ["beruf", "job", "büro", "kollege"],
+                        "situations": ["Arbeitsplatz", "Alltag"]
+                    },
+                    "synonyms": ["Job", "Beschäftigung"],
+                    "antonyms": ["Freizeit"],
+                    "collocations": {
+                        "adjectives": ["interessant", "langweilig", "gut bezahlt"],
+                        "verbs": ["zur Arbeit gehen", "Arbeit suchen", "Arbeit finden"]
+                    },
+                    "phrases": ["auf der Arbeit sein", "von der Arbeit kommen"],
+                    "context": "Das grundlegendste Wort im Themenfeld Arbeit."
+                },
+                "kollege": {
+                    "id": "kollege",
+                    "title": "der Kollege",
+                    "article": "der",
+                    "translation": "коллега",
+                    "definition": "Eine Person, mit der man zusammenarbeitet.",
+                    "example": "Meine Kollegen sind sehr hilfsbereit.",
+                    "level": "A2",
+                    "connections": {
+                        "verbs": ["zusammenarbeiten", "helfen", "sprechen"],
+                        "related": ["arbeit", "team", "chef", "büro"],
+                        "situations": ["Arbeitsplatz", "Teamarbeit"]
+                    },
+                    "synonyms": ["Mitarbeiter", "Arbeitskollege"],
+                    "antonyms": ["Chef"],
+                    "collocations": {
+                        "adjectives": ["netter", "hilfsbereiter", "neuer"],
+                        "verbs": ["mit Kollegen sprechen", "Kollegen helfen"]
+                    },
+                    "phrases": ["unter Kollegen", "ein guter Kollege"],
+                    "context": "Bezeichnet die Menschen, mit denen man täglich zusammenarbeitet."
+                },
+                "gehalt": {
+                    "id": "gehalt",
+                    "title": "das Gehalt",
+                    "article": "das",
+                    "translation": "заработная плата",
+                    "definition": "Das Geld, das man für seine Arbeit regelmäßig bekommt.",
+                    "example": "Am Ende des Monats bekomme ich mein Gehalt.",
+                    "level": "B1",
+                    "connections": {
+                        "verbs": ["bekommen", "verdienen", "auszahlen"],
+                        "related": ["geld", "lohn", "einkommen", "steuer"],
+                        "situations": ["Finanzen", "Arbeitsvertrag"]
+                    },
+                    "synonyms": ["Lohn", "Verdienst", "Einkommen"],
+                    "antonyms": [],
+                    "collocations": {
+                        "adjectives": ["monatlich", "hoch", "niedrig", "fest"],
+                        "verbs": ["Gehalt bekommen", "Gehalt verhandeln"]
+                    },
+                    "phrases": ["das Gehalt wird überwiesen", "Gehaltserhöhung"],
+                    "context": "Die finanzielle Vergütung für die geleistete Arbeit."
+                },
+                "kündigen": {
+                    "id": "kuendigen",
+                    "title": "kündigen",
+                    "article": "verb",
+                    "translation": "увольняться",
+                    "definition": "Das Arbeitsverhältnis selbst beenden oder beendet werden.",
+                    "example": "Ich habe gekündigt und fange nächsten Monat einen neuen Job an.",
+                    "level": "B1",
+                    "connections": {
+                        "verbs": [],
+                        "related": ["entlassen", "kündigung", "jobwechsel"],
+                        "situations": ["Jobwechsel", "Unzufriedenheit"]
+                    },
+                    "synonyms": ["aufhören", "hinschmeißen"],
+                    "antonyms": ["einstellen", "anfangen"],
+                    "collocations": {
+                        "adjectives": ["fristgerecht", "fristlos"],
+                        "verbs": ["den Job kündigen", "kündigen müssen"]
+                    },
+                    "phrases": ["fristgerecht kündigen", "zum Monatsende kündigen"],
+                    "context": "Wichtig bei Jobwechsel oder Beendigung des Arbeitsverhältnisses."
+                },
+                "urlaub": {
+                    "id": "urlaub",
+                    "title": "der Urlaub",
+                    "article": "der",
+                    "translation": "отпуск",
+                    "definition": "Die bezahlte Freizeit, die Arbeitnehmer im Jahr bekommen.",
+                    "example": "Im August habe ich drei Wochen Urlaub.",
+                    "level": "A2",
+                    "connections": {
+                        "verbs": ["haben", "nehmen", "beantragen"],
+                        "related": ["freizeit", "reise", "erholung"],
+                        "situations": ["Arbeitsplanung", "Freizeit"]
+                    },
+                    "synonyms": ["Ferien", "Freizeit"],
+                    "antonyms": ["Arbeitszeit"],
+                    "collocations": {
+                        "adjectives": ["bezahlt", "gesetzlich"],
+                        "verbs": ["Urlaub nehmen", "Urlaub beantragen"]
+                    },
+                    "phrases": ["im Urlaub sein", "Urlaub machen"],
+                    "context": "Wichtiger Bestandteil jedes Arbeitsverhältnisses."
+                }
+            }
+        }
+    }
+}
