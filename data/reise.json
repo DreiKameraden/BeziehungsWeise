@@ -176,6 +176,56 @@
                 "ein Last-Minute-Angebot wahrnehmen"
             ],
             "context": "Beliebt bei spontanen Reisenden. Der Preis ist oft reduziert, um die letzten Plätze zu füllen."
+            },
+            "ferien": {
+            "id": "ferien",
+            "title": "die Ferien",
+            "article": "die",
+            "translation": "каникулы, отпуск",
+            "definition": "Längere arbeitsfreie Zeit, besonders für Schüler und Studenten, oft auch synonym für Urlaub verwendet.",
+            "example": "In den Sommerferien fahren wir ans Meer.",
+            "level": "A1",
+            "connections": {
+                "verbs": ["haben", "verbringen", "machen"],
+                "related": ["urlaub", "reise", "sommer"],
+                "situations": ["Schule", "Familienplanung"]
+            },
+            "synonyms": ["Urlaub", "schulfreie Zeit"],
+            "antonyms": ["Schulzeit", "Arbeitszeit"],
+            "collocations": {
+                "adjectives": ["schön", "lang", "kurz", "verdient"],
+                "verbs": ["Ferien haben", "Ferien machen", "Ferien verbringen"]
+            },
+            "phrases": [
+                "in die Ferien fahren",
+                "die Ferien genießen"
+            ],
+            "context": "Wird besonders im schulischen Kontext verwendet, oft synonym mit Urlaub."
+            },
+            "buchung": {
+            "id": "buchung",
+            "title": "die Buchung",
+            "article": "die",
+            "translation": "бронирование",
+            "definition": "Die Reservierung einer Reise, eines Zimmers, eines Fluges oder einer anderen Dienstleistung.",
+            "example": "Die Buchung des Hotels haben wir bereits vorgenommen.",
+            "level": "B1",
+            "connections": {
+                "verbs": ["vornehmen", "bestätigen", "stornieren", "ändern"],
+                "related": ["buchen", "reservierung", "hotel", "flug"],
+                "situations": ["Reisebüro", "Online-Buchung", "Hotelschalter"]
+            },
+            "synonyms": ["Reservierung", "Bestellung"],
+            "antonyms": ["Stornierung"],
+            "collocations": {
+                "adjectives": ["online", "telefonisch", "verbindlich", "kostenlos"],
+                "verbs": ["eine Buchung vornehmen", "eine Buchung bestätigen", "eine Buchung stornieren"]
+            },
+            "phrases": [
+                "die Buchung abschließen",
+                "die Buchung läuft ab"
+            ],
+            "context": "Zentraler Begriff im Tourismus. Die Buchung ist die verbindliche Reservierung einer Reiseleistung."
             }
         }
         },
@@ -279,6 +329,79 @@
                 "einen Ausflug ins Grüne machen"
             ],
             "context": "Ein sehr häufiges Wort für jegliche Art von kurzem Freizeitausflug."
+            },
+            "wanderung": {
+            "id": "wanderung",
+            "title": "die Wanderung",
+            "article": "die",
+            "translation": "пешая прогулка, поход",
+            "definition": "Ein längerer Spaziergang oder eine mehrtägige Tour in der Natur, besonders in den Bergen oder im Wald.",
+            "example": "Die Wanderung auf den Gipfel hat vier Stunden gedauert.",
+            "level": "A2",
+            "connections": {
+                "verbs": ["machen", "unternehmen", "gehen"],
+                "related": ["ausflug", "berg", "wald", "tour"],
+                "situations": ["Naturerlebnis", "Sport", "Wochenende"]
+            },
+            "synonyms": ["Fußwanderung", "Tour", "Marsch"],
+            "antonyms": [],
+            "collocations": {
+                "adjectives": ["lang", "schön", "anstrengend", "gemütlich"],
+                "verbs": ["eine Wanderung machen", "eine Wanderung unternehmen"]
+            },
+            "phrases": [
+                "eine Wanderung durch den Wald",
+                "auf Wanderung gehen"
+            ],
+            "context": "Sehr beliebte Freizeitaktivität im deutschsprachigen Raum, besonders in den Alpen."
+            },
+            "radtour": {
+            "id": "radtour",
+            "title": "die Radtour",
+            "article": "die",
+            "translation": "велосипедная прогулка, велотур",
+            "definition": "Eine Fahrt mit dem Fahrrad zu Erholungs- oder Besichtigungszwecken, meist eintägig oder über mehrere Tage.",
+            "example": "Bei schönem Wetter machen wir eine Radtour entlang des Rheins.",
+            "level": "A2",
+            "connections": {
+                "verbs": ["machen", "fahren", "unternehmen"],
+                "related": ["fahrrad", "tour", "ausflug"],
+                "situations": ["Freizeit", "Sport", "Familienausflug"]
+            },
+            "synonyms": ["Fahrradtour", "Radfahrt"],
+            "antonyms": [],
+            "collocations": {
+                "adjectives": ["schön", "lang", "gemütlich"],
+                "verbs": ["eine Radtour machen", "eine Radtour unternehmen"]
+            },
+            "phrases": [
+                "mit dem Fahrrad eine Radtour machen"
+            ],
+            "context": "Besonders in Deutschland und den Niederlanden sehr beliebt aufgrund der gut ausgebauten Radwege."
+            },
+            "picknick": {
+            "id": "picknick",
+            "title": "das Picknick",
+            "article": "das",
+            "translation": "пикник",
+            "definition": "Eine Mahlzeit im Freien, oft während eines Ausflugs.",
+            "example": "Wir haben ein Picknick im Park gemacht.",
+            "level": "A2",
+            "connections": {
+                "verbs": ["machen", "veranstalten"],
+                "related": ["ausflug", "natur", "essen"],
+                "situations": ["Familienausflug", "Sommer", "Wochenende"]
+            },
+            "synonyms": [],
+            "antonyms": [],
+            "collocations": {
+                "adjectives": ["schön", "gemütlich"],
+                "verbs": ["ein Picknick machen", "zum Picknick gehen"]
+            },
+            "phrases": [
+                "ein Picknick im Grünen"
+            ],
+            "context": "Oft Teil eines Ausflugs, besonders bei Familien mit Kindern."
             }
         }
         },
@@ -359,6 +482,106 @@
                 "eine Trekking-Tour unternehmen"
             ],
             "context": "Eine spezielle, oft anstrengendere Form des Wanderns in abgelegenen Gebieten."
+            },
+            "fliegen": {
+            "id": "fliegen",
+            "title": "fliegen",
+            "article": "verb",
+            "translation": "лететь, летать",
+            "definition": "Sich mit dem Flugzeug durch die Luft bewegen.",
+            "example": "Wir fliegen nächste Woche nach Spanien.",
+            "level": "A1",
+            "connections": {
+                "verbs": [],
+                "related": ["flug", "flugzeug", "flughafen", "abfliegen"],
+                "situations": ["Flughafen", "Urlaub", "Geschäftsreise"]
+            },
+            "synonyms": ["mit dem Flugzeug reisen"],
+            "antonyms": ["fahren", "gehen"],
+            "collocations": {
+                "adjectives": ["direkt", "nonstop"],
+                "verbs": ["nach ... fliegen", "über ... fliegen"]
+            },
+            "phrases": [
+                "in den Urlaub fliegen",
+                "nach Berlin fliegen"
+            ],
+            "context": "Das wichtigste Verb für Reisen mit dem Flugzeug."
+            },
+            "fahren": {
+            "id": "fahren",
+            "title": "fahren",
+            "article": "verb",
+            "translation": "ехать, водить (машину)",
+            "definition": "Sich mit einem Fahrzeug (Auto, Zug, Bus) fortbewegen.",
+            "example": "Wir fahren mit dem Zug nach München.",
+            "level": "A1",
+            "connections": {
+                "verbs": [],
+                "related": ["auto", "zug", "bus", "fahrt"],
+                "situations": ["Bahnhof", "Autofahrt", "Alltag"]
+            },
+            "synonyms": [],
+            "antonyms": ["fliegen", "gehen"],
+            "collocations": {
+                "adjectives": ["schnell", "langsam"],
+                "verbs": ["mit dem Auto fahren", "Zug fahren", "nach ... fahren"]
+            },
+            "phrases": [
+                "in den Urlaub fahren",
+                "nach Hause fahren"
+            ],
+            "context": "Das grundlegende Verb für Fortbewegung mit Fahrzeugen."
+            },
+            "buchen": {
+            "id": "buchen",
+            "title": "buchen",
+            "article": "verb",
+            "translation": "бронировать",
+            "definition": "Eine Reise, ein Hotel, einen Flug oder eine andere Dienstleistung reservieren.",
+            "example": "Wir haben ein Hotel in der Innenstadt gebucht.",
+            "level": "B1",
+            "connections": {
+                "verbs": [],
+                "related": ["buchung", "reservieren", "hotel", "flug"],
+                "situations": ["Reisebüro", "Online-Buchung", "Hotel"]
+            },
+            "synonyms": ["reservieren", "vorbestellen"],
+            "antonyms": ["stornieren"],
+            "collocations": {
+                "adjectives": ["online", "telefonisch"],
+                "verbs": ["ein Hotel buchen", "einen Flug buchen", "eine Reise buchen"]
+            },
+            "phrases": [
+                "im Voraus buchen",
+                "last minute buchen"
+            ],
+            "context": "Eines der wichtigsten Verben im Tourismus. Die Buchung kann online, telefonisch oder im Reisebüro erfolgen."
+            },
+            "stornieren": {
+            "id": "stornieren",
+            "title": "stornieren",
+            "article": "verb",
+            "translation": "отменять (бронирование)",
+            "definition": "Eine bereits vorgenommene Buchung wieder rückgängig machen.",
+            "example": "Wir mussten unsere Reise leider stornieren.",
+            "level": "B2",
+            "connections": {
+                "verbs": [],
+                "related": ["stornierung", "buchung", "annullieren"],
+                "situations": ["Reisebüro", "Kulanz", "Problem"]
+            },
+            "synonyms": ["annullieren", "rückgängig machen"],
+            "antonyms": ["buchen", "bestätigen"],
+            "collocations": {
+                "adjectives": ["kostenlos", "gebührenpflichtig"],
+                "verbs": ["eine Buchung stornieren", "einen Flug stornieren"]
+            },
+            "phrases": [
+                "kostenlos stornieren",
+                "bis 24 Stunden vorher stornieren"
+            ],
+            "context": "Wichtig bei Reiserücktritt. Oft mit Stornierungsgebühren verbunden."
             }
         }
         },
@@ -415,6 +638,56 @@
                 "unter dem Eindruck von etwas stehen"
             ],
             "context": "Oft im Plural 'Eindrücke' verwendet, um die Gesamtheit dessen zu beschreiben, was man auf einer Reise wahrgenommen hat."
+            },
+            "abenteuer": {
+            "id": "abenteuer",
+            "title": "das Abenteuer",
+            "article": "das",
+            "translation": "приключение",
+            "definition": "Eine aufregende, ungewöhnliche und oft riskante Unternehmung.",
+            "example": "Die Reise durch den Dschungel war ein großes Abenteuer.",
+            "level": "B1",
+            "connections": {
+                "verbs": ["erleben", "suchen", "bestehen"],
+                "related": ["erlebnis", "gefahr", "spannung"],
+                "situations": ["Reisebericht", "Film", "Buch"]
+            },
+            "synonyms": ["Risiko", "Wagnis"],
+            "antonyms": ["Langeweile", "Routine"],
+            "collocations": {
+                "adjectives": ["groß", "gefährlich", "aufregend"],
+                "verbs": ["ein Abenteuer erleben", "auf Abenteuer gehen"]
+            },
+            "phrases": [
+                "Abenteuer suchen",
+                "ein Abenteuer bestehen"
+            ],
+            "context": "Wird oft mit Fernreisen, Exkursionen und ungewöhnlichen Aktivitäten verbunden."
+            },
+            "empfehlen": {
+            "id": "empfehlen",
+            "title": "empfehlen",
+            "article": "verb",
+            "translation": "рекомендовать",
+            "definition": "Jemandem einen Rat geben, etwas zu tun oder zu besuchen; etwas positiv hervorheben.",
+            "example": "Kannst du mir ein gutes Hotel in Berlin empfehlen?",
+            "level": "B1",
+            "connections": {
+                "verbs": [],
+                "related": ["empfehlung", "tipp", "rat"],
+                "situations": ["Reiseberatung", "Gespräch mit Freunden", "Hotel"]
+            },
+            "synonyms": ["raten", "vorschlagen"],
+            "antonyms": ["abraten"],
+            "collocations": {
+                "adjectives": ["wärmstens", "gerne"],
+                "verbs": ["jemandem etwas empfehlen", "sich empfehlen lassen"]
+            },
+            "phrases": [
+                "sehr zu empfehlen",
+                "auf Empfehlung von ..."
+            ],
+            "context": "Wichtig bei der Weitergabe von Reiseerfahrungen und Tipps."
             }
         }
         },
@@ -650,6 +923,136 @@
                 "der Wechselkurs der Valuta"
             ],
             "context": "Wird bei internationalen Transaktionen, Reisen und im Finanzsektor verwendet. Wichtig beim Geldwechsel."
+            },
+            "ausweis": {
+            "id": "ausweis",
+            "title": "der Ausweis",
+            "article": "der",
+            "translation": "удостоверение личности",
+            "definition": "Ein amtliches Dokument, das die Identität einer Person bestätigt.",
+            "example": "Kann ich bitte Ihren Ausweis sehen?",
+            "level": "A2",
+            "connections": {
+                "verbs": ["vorzeigen", "beantragen", "verlängern"],
+                "related": ["pass", "personalausweis", "identität"],
+                "situations": ["Hotel", "Polizei", "Behörde"]
+            },
+            "synonyms": ["Identitätskarte", "Personalausweis"],
+            "antonyms": [],
+            "collocations": {
+                "adjectives": ["gültig", "abgelaufen"],
+                "verbs": ["den Ausweis vorzeigen", "einen Ausweis beantragen"]
+            },
+            "phrases": [
+                "sich ausweisen können",
+                "ohne Ausweis reisen"
+            ],
+            "context": "Innerhalb der EU reicht oft der Personalausweis statt des Reisepasses."
+            },
+            "unterkunft": {
+            "id": "unterkunft",
+            "title": "die Unterkunft",
+            "article": "die",
+            "translation": "размещение, жилье",
+            "definition": "Ein Ort, an dem man während einer Reise übernachtet, z.B. Hotel, Jugendherberge, Ferienwohnung.",
+            "example": "Wir suchen noch eine preiswerte Unterkunft in der Innenstadt.",
+            "level": "A2",
+            "connections": {
+                "verbs": ["suchen", "finden", "buchen", "empfehlen"],
+                "related": ["hotel", "jugendherberge", "ferienwohnung", "camping"],
+                "situations": ["Reiseplanung", "Hotelbuchung", "Urlaub"]
+            },
+            "synonyms": ["Quartier", "Nächtigungsmöglichkeit"],
+            "antonyms": [],
+            "collocations": {
+                "adjectives": ["preiswert", "günstig", "komfortabel", "einfach"],
+                "verbs": ["eine Unterkunft suchen", "eine Unterkunft buchen", "eine Unterkunft finden"]
+            },
+            "phrases": [
+                "Unterkunft mit Frühstück",
+                "eine Unterkunft empfehlen"
+            ],
+            "context": "Sammelbegriff für alle Arten von Übernachtungsmöglichkeiten auf Reisen."
+            }
+        }
+        },
+        "unterkunft_sektion": {
+        "id": "unterkunft_sektion",
+        "title": "Unterkunft & Hotel",
+        "description": "Wörter rund um Übernachtung, Hotels und andere Unterkünfte.",
+        "words": {
+            "hotel": {
+            "id": "hotel",
+            "title": "das Hotel",
+            "article": "das",
+            "translation": "отель, гостиница",
+            "definition": "Ein Betrieb, der gegen Bezahlung Übernachtungsmöglichkeiten und oft auch Verpflegung anbietet.",
+            "example": "Wir haben ein Hotel mit Meerblick gebucht.",
+            "level": "A1",
+            "connections": {
+                "verbs": ["buchen", "empfehlen", "suchen", "finden"],
+                "related": ["unterkunft", "zimmer", "rezeption", "frühstück"],
+                "situations": ["Reiseplanung", "Urlaub", "Geschäftsreise"]
+            },
+            "synonyms": ["Gasthof", "Pension"],
+            "antonyms": [],
+            "collocations": {
+                "adjectives": ["günstig", "luxuriös", "komfortabel", "zentral"],
+                "verbs": ["im Hotel übernachten", "ein Hotel buchen", "ins Hotel gehen"]
+            },
+            "phrases": [
+                "Hotel garni",
+                "Hotel mit Halbpension"
+            ],
+            "context": "Die häufigste Form der Unterkunft auf Reisen."
+            },
+            "jugendherberge": {
+            "id": "jugendherberge",
+            "title": "die Jugendherberge",
+            "article": "die",
+            "translation": "молодежная турбаза, хостел",
+            "definition": "Eine einfache, preisgünstige Unterkunft besonders für junge Leute, oft mit Mehrbettzimmern.",
+            "example": "In der Jugendherberge haben wir nette Leute kennengelernt.",
+            "level": "A2",
+            "connections": {
+                "verbs": ["übernachten", "buchen"],
+                "related": ["unterkunft", "hostel", "mehrbettzimmer"],
+                "situations": ["Klassenfahrt", "Backpacking", "Jugendreise"]
+            },
+            "synonyms": ["Hostel", "Jugendgästehaus"],
+            "antonyms": ["Luxushotel"],
+            "collocations": {
+                "adjectives": ["preisgünstig", "einfach"],
+                "verbs": ["in der Jugendherberge übernachten", "eine Jugendherberge buchen"]
+            },
+            "phrases": [
+                "in der Jugendherberge absteigen"
+            ],
+            "context": "Besonders bei jungen Reisenden und Schulklassen beliebt."
+            },
+            "ferienwohnung": {
+            "id": "ferienwohnung",
+            "title": "die Ferienwohnung",
+            "article": "die",
+            "translation": "квартира для отпуска, апартаменты",
+            "definition": "Eine privat vermietete Wohnung, die man für den Urlaub mieten kann.",
+            "example": "Wir haben eine Ferienwohnung in den Bergen gemietet.",
+            "level": "B1",
+            "connections": {
+                "verbs": ["mieten", "buchen", "empfehlen"],
+                "related": ["unterkunft", "wohnung", "urlaub"],
+                "situations": ["Familienurlaub", "Selbstversorger"]
+            },
+            "synonyms": ["Ferienhaus", "Apartment"],
+            "antonyms": [],
+            "collocations": {
+                "adjectives": ["gemütlich", "gut ausgestattet", "zentral"],
+                "verbs": ["eine Ferienwohnung mieten", "in einer Ferienwohnung wohnen"]
+            },
+            "phrases": [
+                "Ferienwohnung mit Selbstverpflegung"
+            ],
+            "context": "Besonders bei Familien und für längere Aufenthalte beliebt."
             }
         }
         }
