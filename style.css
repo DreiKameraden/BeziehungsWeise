@@ -256,6 +256,8 @@ main {
     flex-direction: column;
     overflow-y: auto;
     max-height: calc(100vh - 150px);
+    height: 650px;
+    max-height: 650px;
 }
 
 .details h2 {
@@ -636,4 +638,57 @@ footer .tech {
 
 .details::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+/* В конец файла со стилями */
+@media (max-width: 768px) {
+    .graph-container {
+        touch-action: none; /* Отключаем стандартные жесты браузера */
+        -webkit-overflow-scrolling: touch;
+        user-select: none;
+        -webkit-user-select: none;
+        cursor: default;
+    }
+    
+    #wordGraph {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    
+    .graph-container:active {
+        cursor: grabbing;
+    }
+    
+    /* Увеличиваем область нажатия для узлов на мобильных */
+    .node {
+        r: 26; /* Чуть больше на мобильных */
+    }
+    
+    .node.selected {
+        r: 32;
+    }
+    
+    /* Увеличиваем шрифт для подписей на мобильных */
+    .node-label {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    /* Кнопки управления графом на мобильных */
+    .graph-controls-buttons {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .control-btn {
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    
+    .control-btn i {
+        font-size: 24px;
+    }
 }

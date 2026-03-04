@@ -677,107 +677,190 @@ class SimpleWordGraph {
         document.getElementById('edgeCount').textContent = `${this.edges.length} Verbindungen`;
     }
     
-    setupEventListeners() {
-        // Кнопка сброса графа
-        document.getElementById('resetBtn').addEventListener('click', () => {
-            this.resetView();
-            this.createGraph();
-            this.drawGraph();
-        });
-        
-        // Кнопка смены layout
-        document.getElementById('layoutBtn').addEventListener('click', () => {
-            if (this.currentLayout === 'sectionsGrouped') {
-                this.applySectionsCircleLayout();
-            } else if (this.currentLayout === 'sectionsCircle') {
-                this.applySectionsGroupedLayout();
-            }
-        });
-        
-        // Загрузка темы
-        document.getElementById('loadThemeBtn').addEventListener('click', () => {
-            const themeId = document.getElementById('themeSelect').value;
-            this.loadTheme(themeId);
-        });
-        
-        // Поиск
-        const searchInput = document.getElementById('searchInput');
-        searchInput.addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase().trim();
-            if (query.length >= 2) {
-                const found = this.nodes.find(node => 
-                    node.label.toLowerCase().includes(query) || 
-                    node.translation.toLowerCase().includes(query)
-                );
+setupEventListeners() {
+    // Кнопка сброса графа
+    document.getElementById('resetBtn').addEventListener('click', () => {
+        this.resetView();
+        this.createGraph();
+        this.drawGraph();
+    });
+    
+    // Кнопка смены layout
+    document.getElementById('layoutBtn').addEventListener('click', () => {
+        if (this.currentLayout === 'sectionsGrouped') {
+            this.applySectionsCircleLayout();
+        } else if (this.currentLayout === 'sectionsCircle') {
+            this.applySectionsGroupedLayout();
+        }
+    });
+    
+    // Загрузка темы
+    document.getElementById('loadThemeBtn').addEventListener('click', () => {
+        const themeId = document.getElementById('themeSelect').value;
+        this.loadTheme(themeId);
+    });
+    
+    // Поиск
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        if (query.length >= 2) {
+            const found = this.nodes.find(node => 
+                node.label.toLowerCase().includes(query) || 
+                node.translation.toLowerCase().includes(query)
+            );
+            
+            if (found) {
+                this.selectNode(found);
                 
-                if (found) {
-                    this.selectNode(found);
-                    
-                    // Центрируем вид на найденном узле
-                    this.translateX = 400 - found.x * this.scale;
-                    this.translateY = 300 - found.y * this.scale;
-                    this.drawGraph();
-                }
+                // Центрируем вид на найденном узле
+                this.translateX = 400 - found.x * this.scale;
+                this.translateY = 300 - found.y * this.scale;
+                this.drawGraph();
             }
-        });
+        }
+    });
+    
+    // ============== ОБРАБОТЧИКИ ДЛЯ ПЕРЕТАСКИВАНИЯ ==============
+    const svg = document.getElementById('wordGraph');
+    const container = document.querySelector('.graph-container');
+    
+    // Функции для перетаскивания
+    const startDrag = (clientX, clientY) => {
+        // Проверяем, что клик не по узлу
+        if (document.elementFromPoint(clientX, clientY)?.tagName === 'circle') {
+            return;
+        }
+        this.isDragging = true;
+        this.startX = clientX - this.translateX;
+        this.startY = clientY - this.translateY;
+        svg.style.cursor = 'grabbing';
+        container.style.cursor = 'grabbing';
+    };
+    
+    const onDrag = (clientX, clientY) => {
+        if (!this.isDragging) return;
         
-        // Перетаскивание карты
-        const svg = document.getElementById('wordGraph');
+        const newTranslateX = clientX - this.startX;
+        const newTranslateY = clientY - this.startY;
         
-        svg.addEventListener('mousedown', (e) => {
-            if (e.target.tagName === 'svg' || e.target.tagName === 'g' || e.target.classList.contains('section-label-bg')) {
-                this.isDragging = true;
-                this.startX = e.clientX - this.translateX;
-                this.startY = e.clientY - this.translateY;
-                svg.style.cursor = 'grabbing';
-            }
-        });
-        
-        window.addEventListener('mousemove', (e) => {
-            if (this.isDragging) {
-                e.preventDefault();
-                this.translateX = e.clientX - this.startX;
-                this.translateY = e.clientY - this.startY;
-                
-                const mainGroup = document.getElementById('graph-main-group');
-                if (mainGroup) {
-                    mainGroup.setAttribute('transform', `translate(${this.translateX}, ${this.translateY}) scale(${this.scale})`);
-                }
-            }
-        });
-        
-        window.addEventListener('mouseup', () => {
-            if (this.isDragging) {
-                this.isDragging = false;
-                svg.style.cursor = 'default';
-            }
-        });
-        
-        // Zoom колесиком
-        svg.addEventListener('wheel', (e) => {
+        // Плавное обновление без перерисовки всего графа
+        const mainGroup = document.getElementById('graph-main-group');
+        if (mainGroup) {
+            this.translateX = newTranslateX;
+            this.translateY = newTranslateY;
+            mainGroup.setAttribute('transform', `translate(${this.translateX}, ${this.translateY}) scale(${this.scale})`);
+        }
+    };
+    
+    const stopDrag = () => {
+        if (this.isDragging) {
+            this.isDragging = false;
+            svg.style.cursor = 'default';
+            container.style.cursor = 'default';
+        }
+    };
+    
+    // ===== МЫШЬ (десктоп) =====
+    svg.addEventListener('mousedown', (e) => {
+        e.preventDefault();
+        startDrag(e.clientX, e.clientY);
+    });
+    
+    window.addEventListener('mousemove', (e) => {
+        onDrag(e.clientX, e.clientY);
+    });
+    
+    window.addEventListener('mouseup', stopDrag);
+    
+    // ===== TOUCH (мобильные) =====
+    svg.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        const touch = e.touches[0];
+        startDrag(touch.clientX, touch.clientY);
+    }, { passive: false });
+    
+    window.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+        const touch = e.touches[0];
+        onDrag(touch.clientX, touch.clientY);
+    }, { passive: false });
+    
+    window.addEventListener('touchend', stopDrag);
+    window.addEventListener('touchcancel', stopDrag);
+    
+    // ===== ZOOM =====
+    // Zoom колесиком (мышь)
+    svg.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        this.handleZoom(e.deltaY, e.clientX, e.clientY);
+    });
+    
+    // Pinch-to-zoom (пальцы)
+    let initialDistance = 0;
+    let initialScale = 1;
+    
+    svg.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 2) {
             e.preventDefault();
+            initialDistance = this.getTouchDistance(e.touches[0], e.touches[1]);
+            initialScale = this.scale;
+        }
+    }, { passive: false });
+    
+    svg.addEventListener('touchmove', (e) => {
+        if (e.touches.length === 2) {
+            e.preventDefault();
+            const currentDistance = this.getTouchDistance(e.touches[0], e.touches[1]);
+            const scaleFactor = currentDistance / initialDistance;
             
-            const zoomFactor = 0.1;
-            const delta = e.deltaY > 0 ? -zoomFactor : zoomFactor;
-            const newScale = Math.max(0.5, Math.min(2, this.scale + delta));
+            // Центр между пальцами
+            const centerX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+            const centerY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
             
-            // Zoom относительно позиции мыши
-            const rect = svg.getBoundingClientRect();
-            const mouseX = e.clientX - rect.left;
-            const mouseY = e.clientY - rect.top;
+            const newScale = Math.max(0.5, Math.min(2, initialScale * scaleFactor));
             
-            const scaleChange = newScale / this.scale;
-            
-            this.translateX = mouseX - (mouseX - this.translateX) * scaleChange;
-            this.translateY = mouseY - (mouseY - this.translateY) * scaleChange;
-            this.scale = newScale;
-            
-            const mainGroup = document.getElementById('graph-main-group');
-            if (mainGroup) {
-                mainGroup.setAttribute('transform', `translate(${this.translateX}, ${this.translateY}) scale(${this.scale})`);
-            }
-        });
+            // Применяем зум
+            this.applyZoom(newScale, centerX, centerY);
+        }
+    }, { passive: false });
+}
+
+// Вспомогательные методы для зума
+handleZoom(deltaY, clientX, clientY) {
+    const zoomFactor = 0.1;
+    const delta = deltaY > 0 ? -zoomFactor : zoomFactor;
+    const newScale = Math.max(0.5, Math.min(2, this.scale + delta));
+    
+    this.applyZoom(newScale, clientX, clientY);
+}
+
+getTouchDistance(touch1, touch2) {
+    const dx = touch1.clientX - touch2.clientX;
+    const dy = touch1.clientY - touch2.clientY;
+    return Math.sqrt(dx * dx + dy * dy);
+}
+
+applyZoom(newScale, clientX, clientY) {
+    const svg = document.getElementById('wordGraph');
+    const rect = svg.getBoundingClientRect();
+    
+    // Координаты относительно SVG
+    const svgX = clientX - rect.left;
+    const svgY = clientY - rect.top;
+    
+    // Корректировка translate для зума относительно точки
+    const scaleChange = newScale / this.scale;
+    
+    this.translateX = svgX - (svgX - this.translateX) * scaleChange;
+    this.translateY = svgY - (svgY - this.translateY) * scaleChange;
+    this.scale = newScale;
+    
+    const mainGroup = document.getElementById('graph-main-group');
+    if (mainGroup) {
+        mainGroup.setAttribute('transform', `translate(${this.translateX}, ${this.translateY}) scale(${this.scale})`);
     }
+}
 }
 
 // Запуск приложения
