@@ -643,7 +643,7 @@ footer .tech {
 /* В конец файла со стилями */
 @media (max-width: 768px) {
     .graph-container {
-        touch-action: none; /* Отключаем стандартные жесты браузера */
+
         -webkit-overflow-scrolling: touch;
         user-select: none;
         -webkit-user-select: none;
