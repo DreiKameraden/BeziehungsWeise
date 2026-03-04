@@ -676,8 +676,8 @@ class SimpleWordGraph {
         document.getElementById('nodeCount').textContent = `${this.nodes.length} Wörter`;
         document.getElementById('edgeCount').textContent = `${this.edges.length} Verbindungen`;
     }
-    
-setupEventListeners() {
+
+    setupEventListeners() {
     // Кнопка сброса графа
     document.getElementById('resetBtn').addEventListener('click', () => {
         this.resetView();
@@ -725,17 +725,31 @@ setupEventListeners() {
     const svg = document.getElementById('wordGraph');
     const container = document.querySelector('.graph-container');
     
+    // Флаги для touch-событий
+    let isTouchDrag = false;
+    let isPinchZoom = false;
+    let startTime = 0;
+    
     // Функции для перетаскивания
-    const startDrag = (clientX, clientY) => {
+    const startDrag = (clientX, clientY, isTouch = false) => {
         // Проверяем, что клик не по узлу
-        if (document.elementFromPoint(clientX, clientY)?.tagName === 'circle') {
-            return;
+        const elementAtPoint = document.elementFromPoint(clientX, clientY);
+        if (elementAtPoint?.tagName === 'circle' || elementAtPoint?.classList?.contains('node')) {
+            return false;
         }
+        
         this.isDragging = true;
+        if (isTouch) isTouchDrag = true;
+        
         this.startX = clientX - this.translateX;
         this.startY = clientY - this.translateY;
+        
         svg.style.cursor = 'grabbing';
         container.style.cursor = 'grabbing';
+        container.classList.add('dragging'); // ВАЖНО: добавляем класс
+        
+        startTime = Date.now();
+        return true;
     };
     
     const onDrag = (clientX, clientY) => {
@@ -744,7 +758,6 @@ setupEventListeners() {
         const newTranslateX = clientX - this.startX;
         const newTranslateY = clientY - this.startY;
         
-        // Плавное обновление без перерисовки всего графа
         const mainGroup = document.getElementById('graph-main-group');
         if (mainGroup) {
             this.translateX = newTranslateX;
@@ -756,8 +769,10 @@ setupEventListeners() {
     const stopDrag = () => {
         if (this.isDragging) {
             this.isDragging = false;
+            isTouchDrag = false;
             svg.style.cursor = 'default';
             container.style.cursor = 'default';
+            container.classList.remove('dragging'); // ВАЖНО: убираем класс
         }
     };
     
@@ -775,19 +790,54 @@ setupEventListeners() {
     
     // ===== TOUCH (мобильные) =====
     svg.addEventListener('touchstart', (e) => {
-        e.preventDefault();
-        const touch = e.touches[0];
-        startDrag(touch.clientX, touch.clientY);
+        // Если два пальца - это зум
+        if (e.touches.length === 2) {
+            isPinchZoom = true;
+            return;
+        }
+        
+        // Если один палец - пробуем начать перетаскивание
+        if (e.touches.length === 1) {
+            const touch = e.touches[0];
+            const started = startDrag(touch.clientX, touch.clientY, true);
+            
+            // Если начали перетаскивание (не кликнули по узлу) - блокируем прокрутку
+            if (started) {
+                e.preventDefault();
+            }
+        }
     }, { passive: false });
     
     window.addEventListener('touchmove', (e) => {
-        e.preventDefault();
-        const touch = e.touches[0];
-        onDrag(touch.clientX, touch.clientY);
+        // Если два пальца - зум
+        if (e.touches.length === 2 && isPinchZoom) {
+            e.preventDefault();
+            // Зум обрабатывается отдельно
+            return;
+        }
+        
+        // Если один палец и мы перетаскиваем
+        if (e.touches.length === 1 && this.isDragging && isTouchDrag) {
+            e.preventDefault(); // Блокируем прокрутку ТОЛЬКО когда тащим
+            const touch = e.touches[0];
+            onDrag(touch.clientX, touch.clientY);
+        }
     }, { passive: false });
     
-    window.addEventListener('touchend', stopDrag);
-    window.addEventListener('touchcancel', stopDrag);
+    window.addEventListener('touchend', (e) => {
+        if (this.isDragging) {
+            stopDrag();
+        }
+        
+        if (e.touches.length === 0) {
+            isPinchZoom = false;
+        }
+    });
+    
+    window.addEventListener('touchcancel', () => {
+        stopDrag();
+        isPinchZoom = false;
+    });
     
     // ===== ZOOM =====
     // Zoom колесиком (мышь)
@@ -799,29 +849,37 @@ setupEventListeners() {
     // Pinch-to-zoom (пальцы)
     let initialDistance = 0;
     let initialScale = 1;
+    let zoomCenterX = 0;
+    let zoomCenterY = 0;
     
-    svg.addEventListener('touchstart', (e) => {
-        if (e.touches.length === 2) {
+    // Обработчики зума уже добавлены в touchstart/touchmove выше
+    // Добавим логику зума в touchmove для двух пальцев
+    const originalTouchMove = window.addEventListener('touchmove', (e) => {
+        if (e.touches.length === 2 && isPinchZoom) {
             e.preventDefault();
-            initialDistance = this.getTouchDistance(e.touches[0], e.touches[1]);
-            initialScale = this.scale;
-        }
-    }, { passive: false });
-    
-    svg.addEventListener('touchmove', (e) => {
-        if (e.touches.length === 2) {
-            e.preventDefault();
+            
             const currentDistance = this.getTouchDistance(e.touches[0], e.touches[1]);
             const scaleFactor = currentDistance / initialDistance;
             
             // Центр между пальцами
-            const centerX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
-            const centerY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
+            zoomCenterX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+            zoomCenterY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
             
             const newScale = Math.max(0.5, Math.min(2, initialScale * scaleFactor));
             
-            // Применяем зум
-            this.applyZoom(newScale, centerX, centerY);
+            this.applyZoom(newScale, zoomCenterX, zoomCenterY);
+        }
+    }, { passive: false });
+    
+    // Переопределяем обработчик для двух пальцев
+    svg.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 2) {
+            e.preventDefault();
+            isPinchZoom = true;
+            initialDistance = this.getTouchDistance(e.touches[0], e.touches[1]);
+            initialScale = this.scale;
+            zoomCenterX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+            zoomCenterY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
         }
     }, { passive: false });
 }
