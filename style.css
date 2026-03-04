@@ -579,8 +579,6 @@ footer .tech {
 .control-btn i {
     color: #666;
 }
-
-/* Адаптивность */
 @media (max-width: 1200px) {
     main {
         grid-template-columns: 1fr;
@@ -588,19 +586,21 @@ footer .tech {
     }
     
     .details {
-        max-height: none;
+        max-height: 500px; /* Вместо none */
+        height: 500px;
+    }
+    
+    .graph-container {
+        height: 500px;
     }
     
     header .controls {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
-    .graph-container {
-        height: 500px;
-    }
 }
 
+/* Мобильные стили */
 @media (max-width: 768px) {
     .container {
         padding: 15px;
@@ -619,63 +619,43 @@ footer .tech {
         min-width: auto;
         width: 100%;
     }
-}
-
-/* Скроллбар для details */
-.details::-webkit-scrollbar {
-    width: 8px;
-}
-
-.details::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-
-.details::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    border-radius: 10px;
-}
-
-.details::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #764ba2, #667eea);
-}
-
-/* В конец файла со стилями */
-@media (max-width: 768px) {
+    
+    /* Стили для графа на мобильных */
     .graph-container {
-
+        height: 450px;
+        touch-action: pan-y pinch-zoom;
         -webkit-overflow-scrolling: touch;
         user-select: none;
         -webkit-user-select: none;
         cursor: default;
     }
     
+    .graph-container.dragging {
+        touch-action: none;
+        cursor: grabbing;
+    }
+    
     #wordGraph {
         width: 100%;
         height: 100%;
         display: block;
+        pointer-events: auto;
     }
     
-    .graph-container:active {
-        cursor: grabbing;
-    }
-    
-    /* Увеличиваем область нажатия для узлов на мобильных */
+    /* Увеличиваем узлы на мобильных */
     .node {
-        r: 26; /* Чуть больше на мобильных */
+        r: 26;
     }
     
     .node.selected {
         r: 32;
     }
     
-    /* Увеличиваем шрифт для подписей на мобильных */
     .node-label {
         font-size: 14px;
-        font-weight: bold;
     }
     
-    /* Кнопки управления графом на мобильных */
+    /* Кнопки управления */
     .graph-controls-buttons {
         bottom: 20px;
         right: 20px;
@@ -690,5 +670,12 @@ footer .tech {
     
     .control-btn i {
         font-size: 24px;
+    }
+    
+    /* Детали на мобильных */
+    .details {
+        height: auto;
+        max-height: 400px;
+        min-height: 250px;
     }
 }
